@@ -1,0 +1,160 @@
+[2024-05-29T10:43:32.738+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-05-29T10:43:32.781+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: check_send_status_dag.check_status scheduled__2023-01-01T01:00:00+00:00 [queued]>
+[2024-05-29T10:43:32.797+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: check_send_status_dag.check_status scheduled__2023-01-01T01:00:00+00:00 [queued]>
+[2024-05-29T10:43:32.798+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2024-05-29T10:43:32.895+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): check_status> on 2023-01-01 01:00:00+00:00
+[2024-05-29T10:43:32.901+0000] {standard_task_runner.py:63} INFO - Started process 103 to run task
+[2024-05-29T10:43:32.904+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'check_send_status_dag', 'check_status', 'scheduled__2023-01-01T01:00:00+00:00', '--job-id', '14', '--raw', '--subdir', 'DAGS_FOLDER/check_send_status_dag.py', '--cfg-path', '/tmp/tmpeto5okw0']
+[2024-05-29T10:43:32.906+0000] {standard_task_runner.py:91} INFO - Job 14: Subtask check_status
+[2024-05-29T10:43:33.004+0000] {task_command.py:426} INFO - Running <TaskInstance: check_send_status_dag.check_status scheduled__2023-01-01T01:00:00+00:00 [running]> on host f708138922bb
+[2024-05-29T10:43:33.186+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='check_send_status_dag' AIRFLOW_CTX_TASK_ID='check_status' AIRFLOW_CTX_EXECUTION_DATE='2023-01-01T01:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-01-01T01:00:00+00:00'
+[2024-05-29T10:43:33.187+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-05-29T10:43:33.212+0000] {check_send_status_dag.py:15} ERROR - Error fetching status: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /check_send_status (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fdb2ba22270>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2024-05-29T10:43:33.213+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-05-29T10:43:33.214+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 793, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 496, in _make_request
+    conn.request(
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connection.py", line 400, in request
+    self.endheaders()
+  File "/usr/local/lib/python3.12/http/client.py", line 1331, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.12/http/client.py", line 1091, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.12/http/client.py", line 1035, in send
+    self.connect()
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connection.py", line 238, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connection.py", line 213, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7fdb2ba22270>: Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 847, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/util/retry.py", line 515, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /check_send_status (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fdb2ba22270>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/check_send_status_dag.py", line 10, in check_send_status
+    response = requests.get("http://127.0.0.1:5000/check_send_status")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /check_send_status (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fdb2ba22270>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2024-05-29T10:43:33.245+0000] {taskinstance.py:1206} INFO - Marking task as UP_FOR_RETRY. dag_id=check_send_status_dag, task_id=check_status, run_id=scheduled__2023-01-01T01:00:00+00:00, execution_date=20230101T010000, start_date=20240529T104332, end_date=20240529T104333
+[2024-05-29T10:43:33.392+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 14 for task check_status (HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /check_send_status (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fdb2ba22270>: Failed to establish a new connection: [Errno 111] Connection refused')); 103)
+[2024-05-29T10:43:33.442+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2024-05-29T10:43:33.614+0000] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-05-29T10:43:33.619+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2024-05-29T13:57:52.551+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-05-29T13:57:52.609+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: check_send_status_dag.check_status scheduled__2023-01-01T01:00:00+00:00 [queued]>
+[2024-05-29T13:57:52.631+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: check_send_status_dag.check_status scheduled__2023-01-01T01:00:00+00:00 [queued]>
+[2024-05-29T13:57:52.632+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2024-05-29T13:57:52.694+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): check_status> on 2023-01-01 01:00:00+00:00
+[2024-05-29T13:57:52.700+0000] {standard_task_runner.py:63} INFO - Started process 1185 to run task
+[2024-05-29T13:57:52.704+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'check_send_status_dag', 'check_status', 'scheduled__2023-01-01T01:00:00+00:00', '--job-id', '14', '--raw', '--subdir', 'DAGS_FOLDER/check_send_status_dag.py', '--cfg-path', '/tmp/tmp_pfxahyz']
+[2024-05-29T13:57:52.707+0000] {standard_task_runner.py:91} INFO - Job 14: Subtask check_status
+[2024-05-29T13:57:52.825+0000] {task_command.py:426} INFO - Running <TaskInstance: check_send_status_dag.check_status scheduled__2023-01-01T01:00:00+00:00 [running]> on host f708138922bb
+[2024-05-29T13:57:53.028+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='check_send_status_dag' AIRFLOW_CTX_TASK_ID='check_status' AIRFLOW_CTX_EXECUTION_DATE='2023-01-01T01:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-01-01T01:00:00+00:00'
+[2024-05-29T13:57:53.029+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-05-29T13:57:53.065+0000] {check_send_status_dag.py:15} ERROR - Error fetching status: 500 Server Error: INTERNAL SERVER ERROR for url: http://flask:5000/check_send_status
+[2024-05-29T13:57:53.067+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-05-29T13:57:53.070+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/check_send_status_dag.py", line 11, in check_send_status
+    response.raise_for_status()
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: INTERNAL SERVER ERROR for url: http://flask:5000/check_send_status
+[2024-05-29T13:57:53.100+0000] {taskinstance.py:1206} INFO - Marking task as UP_FOR_RETRY. dag_id=check_send_status_dag, task_id=check_status, run_id=scheduled__2023-01-01T01:00:00+00:00, execution_date=20230101T010000, start_date=20240529T135752, end_date=20240529T135753
+[2024-05-29T13:57:53.164+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 14 for task check_status (500 Server Error: INTERNAL SERVER ERROR for url: http://flask:5000/check_send_status; 1185)
+[2024-05-29T13:57:53.202+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2024-05-29T13:57:53.229+0000] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-05-29T13:57:53.232+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2024-05-29T14:43:47.725+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-05-29T14:43:47.774+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: check_send_status_dag.check_status scheduled__2023-01-01T01:00:00+00:00 [queued]>
+[2024-05-29T14:43:47.797+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: check_send_status_dag.check_status scheduled__2023-01-01T01:00:00+00:00 [queued]>
+[2024-05-29T14:43:47.798+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2024-05-29T14:43:47.919+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): check_status> on 2023-01-01 01:00:00+00:00
+[2024-05-29T14:43:47.926+0000] {standard_task_runner.py:63} INFO - Started process 1598 to run task
+[2024-05-29T14:43:47.930+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'check_send_status_dag', 'check_status', 'scheduled__2023-01-01T01:00:00+00:00', '--job-id', '14', '--raw', '--subdir', 'DAGS_FOLDER/check_send_status_dag.py', '--cfg-path', '/tmp/tmp0w26jtpr']
+[2024-05-29T14:43:47.932+0000] {standard_task_runner.py:91} INFO - Job 14: Subtask check_status
+[2024-05-29T14:43:48.233+0000] {task_command.py:426} INFO - Running <TaskInstance: check_send_status_dag.check_status scheduled__2023-01-01T01:00:00+00:00 [running]> on host f708138922bb
+[2024-05-29T14:43:48.676+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='check_send_status_dag' AIRFLOW_CTX_TASK_ID='check_status' AIRFLOW_CTX_EXECUTION_DATE='2023-01-01T01:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-01-01T01:00:00+00:00'
+[2024-05-29T14:43:48.677+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-05-29T14:43:48.711+0000] {check_send_status_dag.py:13} INFO - Status: {'status': 'success'}
+[2024-05-29T14:43:48.713+0000] {python.py:237} INFO - Done. Returned value was: None
+[2024-05-29T14:43:48.714+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-05-29T14:43:48.735+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=check_send_status_dag, task_id=check_status, run_id=scheduled__2023-01-01T01:00:00+00:00, execution_date=20230101T010000, start_date=20240529T144347, end_date=20240529T144348
+[2024-05-29T14:43:48.867+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-05-29T14:43:49.089+0000] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-05-29T14:43:49.102+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

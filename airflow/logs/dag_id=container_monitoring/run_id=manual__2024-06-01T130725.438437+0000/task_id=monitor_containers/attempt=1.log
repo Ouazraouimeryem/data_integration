@@ -1,0 +1,21 @@
+[2024-06-01T13:07:43.395+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-06-01T13:07:43.458+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: container_monitoring.monitor_containers manual__2024-06-01T13:07:25.438437+00:00 [queued]>
+[2024-06-01T13:07:43.482+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: container_monitoring.monitor_containers manual__2024-06-01T13:07:25.438437+00:00 [queued]>
+[2024-06-01T13:07:43.500+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2024-06-01T13:07:43.586+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): monitor_containers> on 2024-06-01 13:07:25.438437+00:00
+[2024-06-01T13:07:43.593+0000] {standard_task_runner.py:63} INFO - Started process 524 to run task
+[2024-06-01T13:07:43.596+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'container_monitoring', 'monitor_containers', 'manual__2024-06-01T13:07:25.438437+00:00', '--job-id', '725', '--raw', '--subdir', 'DAGS_FOLDER/container_monitoring.py', '--cfg-path', '/tmp/tmp8nw_14ku']
+[2024-06-01T13:07:43.604+0000] {standard_task_runner.py:91} INFO - Job 725: Subtask monitor_containers
+[2024-06-01T13:07:44.216+0000] {task_command.py:426} INFO - Running <TaskInstance: container_monitoring.monitor_containers manual__2024-06-01T13:07:25.438437+00:00 [running]> on host 9c47fcd741af
+[2024-06-01T13:07:44.490+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='container_monitoring' AIRFLOW_CTX_TASK_ID='monitor_containers' AIRFLOW_CTX_EXECUTION_DATE='2024-06-01T13:07:25.438437+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-06-01T13:07:25.438437+00:00'
+[2024-06-01T13:07:44.491+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-06-01T13:07:44.558+0000] {logging_mixin.py:188} INFO - Container composer-zookeeper-1 is running.
+[2024-06-01T13:07:44.559+0000] {container_monitoring.py:25} INFO - Container composer-zookeeper-1 is running.
+[2024-06-01T13:07:44.590+0000] {logging_mixin.py:188} INFO - Container composer-kafka-1,composer-flask-1, composer-mysql-1 is not running.
+[2024-06-01T13:07:44.590+0000] {container_monitoring.py:28} INFO - Container composer-kafka-1,composer-flask-1, composer-mysql-1 is not running.
+[2024-06-01T13:07:44.591+0000] {python.py:237} INFO - Done. Returned value was: None
+[2024-06-01T13:07:44.592+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-06-01T13:07:44.610+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=container_monitoring, task_id=monitor_containers, run_id=manual__2024-06-01T13:07:25.438437+00:00, execution_date=20240601T130725, start_date=20240601T130743, end_date=20240601T130744
+[2024-06-01T13:07:44.701+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-06-01T13:07:44.836+0000] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-06-01T13:07:44.838+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

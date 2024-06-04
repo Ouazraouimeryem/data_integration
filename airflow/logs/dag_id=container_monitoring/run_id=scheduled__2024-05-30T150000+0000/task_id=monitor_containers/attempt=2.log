@@ -1,0 +1,527 @@
+[2024-05-30T15:35:25.832+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-05-30T15:35:25.881+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: container_monitoring.monitor_containers scheduled__2024-05-30T15:00:00+00:00 [queued]>
+[2024-05-30T15:35:25.905+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: container_monitoring.monitor_containers scheduled__2024-05-30T15:00:00+00:00 [queued]>
+[2024-05-30T15:35:25.906+0000] {taskinstance.py:2306} INFO - Starting attempt 2 of 2
+[2024-05-30T15:35:25.962+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): monitor_containers> on 2024-05-30 15:00:00+00:00
+[2024-05-30T15:35:25.968+0000] {standard_task_runner.py:63} INFO - Started process 3556 to run task
+[2024-05-30T15:35:25.971+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'container_monitoring', 'monitor_containers', 'scheduled__2024-05-30T15:00:00+00:00', '--job-id', '505', '--raw', '--subdir', 'DAGS_FOLDER/container_monitoring.py', '--cfg-path', '/tmp/tmpx4nyd9t8']
+[2024-05-30T15:35:25.974+0000] {standard_task_runner.py:91} INFO - Job 505: Subtask monitor_containers
+[2024-05-30T15:35:26.441+0000] {task_command.py:426} INFO - Running <TaskInstance: container_monitoring.monitor_containers scheduled__2024-05-30T15:00:00+00:00 [running]> on host f708138922bb
+[2024-05-30T15:35:28.011+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='container_monitoring' AIRFLOW_CTX_TASK_ID='monitor_containers' AIRFLOW_CTX_EXECUTION_DATE='2024-05-30T15:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-05-30T15:00:00+00:00'
+[2024-05-30T15:35:28.020+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-05-30T15:35:28.098+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-05-30T15:35:28.100+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 793, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 496, in _make_request
+    conn.request(
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connection.py", line 400, in request
+    self.endheaders()
+  File "/usr/local/lib/python3.12/http/client.py", line 1331, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.12/http/client.py", line 1091, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.12/http/client.py", line 1035, in send
+    self.connect()
+  File "/home/airflow/.local/lib/python3.12/site-packages/docker/transport/unixconn.py", line 27, in connect
+    sock.connect(self.unix_socket)
+FileNotFoundError: [Errno 2] No such file or directory
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 847, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/util/retry.py", line 470, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/util/util.py", line 38, in reraise
+    raise value.with_traceback(tb)
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 793, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 496, in _make_request
+    conn.request(
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connection.py", line 400, in request
+    self.endheaders()
+  File "/usr/local/lib/python3.12/http/client.py", line 1331, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.12/http/client.py", line 1091, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.12/http/client.py", line 1035, in send
+    self.connect()
+  File "/home/airflow/.local/lib/python3.12/site-packages/docker/transport/unixconn.py", line 27, in connect
+    sock.connect(self.unix_socket)
+urllib3.exceptions.ProtocolError: ('Connection aborted.', FileNotFoundError(2, 'No such file or directory'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/docker/api/client.py", line 213, in _retrieve_server_version
+    return self.version(api_version=False)["ApiVersion"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docker/api/daemon.py", line 181, in version
+    return self._result(self._get(url), json=True)
+                        ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docker/utils/decorators.py", line 44, in inner
+    return f(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docker/api/client.py", line 236, in _get
+    return self.get(url, **self._set_request_timeout(kwargs))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/sessions.py", line 602, in get
+    return self.request("GET", url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/adapters.py", line 501, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', FileNotFoundError(2, 'No such file or directory'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/container_monitoring.py", line 17, in monitor_containers
+    status[container] = check_container_status(container)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/container_monitoring.py", line 7, in check_container_status
+    client = docker.from_env()
+             ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docker/client.py", line 94, in from_env
+    return cls(
+           ^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docker/client.py", line 45, in __init__
+    self.api = APIClient(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docker/api/client.py", line 197, in __init__
+    self._version = self._retrieve_server_version()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docker/api/client.py", line 220, in _retrieve_server_version
+    raise DockerException(
+docker.errors.DockerException: Error while fetching server API version: ('Connection aborted.', FileNotFoundError(2, 'No such file or directory'))
+[2024-05-30T15:35:28.167+0000] {taskinstance.py:1206} INFO - Marking task as FAILED. dag_id=container_monitoring, task_id=monitor_containers, run_id=scheduled__2024-05-30T15:00:00+00:00, execution_date=20240530T150000, start_date=20240530T153525, end_date=20240530T153528
+[2024-05-30T15:35:28.284+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 505 for task monitor_containers (Error while fetching server API version: ('Connection aborted.', FileNotFoundError(2, 'No such file or directory')); 3556)
+[2024-05-30T15:35:28.319+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2024-05-30T15:35:28.415+0000] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-05-30T15:35:28.418+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2024-05-30T16:02:53.122+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-05-30T16:02:53.224+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: container_monitoring.monitor_containers scheduled__2024-05-30T15:00:00+00:00 [queued]>
+[2024-05-30T16:02:53.246+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: container_monitoring.monitor_containers scheduled__2024-05-30T15:00:00+00:00 [queued]>
+[2024-05-30T16:02:53.246+0000] {taskinstance.py:2306} INFO - Starting attempt 2 of 2
+[2024-05-30T16:02:53.298+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): monitor_containers> on 2024-05-30 15:00:00+00:00
+[2024-05-30T16:02:53.311+0000] {standard_task_runner.py:63} INFO - Started process 3929 to run task
+[2024-05-30T16:02:53.316+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'container_monitoring', 'monitor_containers', 'scheduled__2024-05-30T15:00:00+00:00', '--job-id', '504', '--raw', '--subdir', 'DAGS_FOLDER/container_monitoring.py', '--cfg-path', '/tmp/tmpexjlkj7s']
+[2024-05-30T16:02:53.319+0000] {standard_task_runner.py:91} INFO - Job 504: Subtask monitor_containers
+[2024-05-30T16:02:53.596+0000] {task_command.py:426} INFO - Running <TaskInstance: container_monitoring.monitor_containers scheduled__2024-05-30T15:00:00+00:00 [running]> on host f708138922bb
+[2024-05-30T16:02:53.761+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='container_monitoring' AIRFLOW_CTX_TASK_ID='monitor_containers' AIRFLOW_CTX_EXECUTION_DATE='2024-05-30T15:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-05-30T15:00:00+00:00'
+[2024-05-30T16:02:53.762+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-05-30T16:02:53.780+0000] {container_monitoring.py:26} ERROR - Error monitoring containers: Error while fetching server API version: ('Connection aborted.', FileNotFoundError(2, 'No such file or directory'))
+[2024-05-30T16:02:53.781+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-05-30T16:02:53.782+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 793, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 496, in _make_request
+    conn.request(
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connection.py", line 400, in request
+    self.endheaders()
+  File "/usr/local/lib/python3.12/http/client.py", line 1331, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.12/http/client.py", line 1091, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.12/http/client.py", line 1035, in send
+    self.connect()
+  File "/home/airflow/.local/lib/python3.12/site-packages/docker/transport/unixconn.py", line 27, in connect
+    sock.connect(self.unix_socket)
+FileNotFoundError: [Errno 2] No such file or directory
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 847, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/util/retry.py", line 470, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/util/util.py", line 38, in reraise
+    raise value.with_traceback(tb)
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 793, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 496, in _make_request
+    conn.request(
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connection.py", line 400, in request
+    self.endheaders()
+  File "/usr/local/lib/python3.12/http/client.py", line 1331, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.12/http/client.py", line 1091, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.12/http/client.py", line 1035, in send
+    self.connect()
+  File "/home/airflow/.local/lib/python3.12/site-packages/docker/transport/unixconn.py", line 27, in connect
+    sock.connect(self.unix_socket)
+urllib3.exceptions.ProtocolError: ('Connection aborted.', FileNotFoundError(2, 'No such file or directory'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/docker/api/client.py", line 213, in _retrieve_server_version
+    return self.version(api_version=False)["ApiVersion"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docker/api/daemon.py", line 181, in version
+    return self._result(self._get(url), json=True)
+                        ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docker/utils/decorators.py", line 44, in inner
+    return f(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docker/api/client.py", line 236, in _get
+    return self.get(url, **self._set_request_timeout(kwargs))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/sessions.py", line 602, in get
+    return self.request("GET", url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/adapters.py", line 501, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', FileNotFoundError(2, 'No such file or directory'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/container_monitoring.py", line 18, in monitor_containers
+    status[container] = check_container_status(container)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/container_monitoring.py", line 7, in check_container_status
+    client = docker.from_env()
+             ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docker/client.py", line 94, in from_env
+    return cls(
+           ^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docker/client.py", line 45, in __init__
+    self.api = APIClient(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docker/api/client.py", line 197, in __init__
+    self._version = self._retrieve_server_version()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docker/api/client.py", line 220, in _retrieve_server_version
+    raise DockerException(
+docker.errors.DockerException: Error while fetching server API version: ('Connection aborted.', FileNotFoundError(2, 'No such file or directory'))
+[2024-05-30T16:02:53.812+0000] {taskinstance.py:1206} INFO - Marking task as FAILED. dag_id=container_monitoring, task_id=monitor_containers, run_id=scheduled__2024-05-30T15:00:00+00:00, execution_date=20240530T150000, start_date=20240530T160253, end_date=20240530T160253
+[2024-05-30T16:02:53.870+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 504 for task monitor_containers (Error while fetching server API version: ('Connection aborted.', FileNotFoundError(2, 'No such file or directory')); 3929)
+[2024-05-30T16:02:53.895+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2024-05-30T16:02:53.924+0000] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-05-30T16:02:53.926+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2024-05-30T16:53:37.393+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-05-30T16:53:37.507+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: container_monitoring.monitor_containers scheduled__2024-05-30T15:00:00+00:00 [queued]>
+[2024-05-30T16:53:37.534+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: container_monitoring.monitor_containers scheduled__2024-05-30T15:00:00+00:00 [queued]>
+[2024-05-30T16:53:37.535+0000] {taskinstance.py:2306} INFO - Starting attempt 2 of 2
+[2024-05-30T16:53:37.621+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): monitor_containers> on 2024-05-30 15:00:00+00:00
+[2024-05-30T16:53:37.633+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'container_monitoring', 'monitor_containers', 'scheduled__2024-05-30T15:00:00+00:00', '--job-id', '510', '--raw', '--subdir', 'DAGS_FOLDER/container_monitoring.py', '--cfg-path', '/tmp/tmpesci5n2a']
+[2024-05-30T16:53:37.637+0000] {standard_task_runner.py:91} INFO - Job 510: Subtask monitor_containers
+[2024-05-30T16:53:37.632+0000] {standard_task_runner.py:63} INFO - Started process 116 to run task
+[2024-05-30T16:53:38.084+0000] {task_command.py:426} INFO - Running <TaskInstance: container_monitoring.monitor_containers scheduled__2024-05-30T15:00:00+00:00 [running]> on host f708138922bb
+[2024-05-30T16:53:38.370+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='container_monitoring' AIRFLOW_CTX_TASK_ID='monitor_containers' AIRFLOW_CTX_EXECUTION_DATE='2024-05-30T15:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-05-30T15:00:00+00:00'
+[2024-05-30T16:53:38.371+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-05-30T16:53:38.433+0000] {container_monitoring.py:30} ERROR - Error monitoring containers: Error while fetching server API version: ('Connection aborted.', FileNotFoundError(2, 'No such file or directory'))
+[2024-05-30T16:53:38.435+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-05-30T16:53:38.442+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 793, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 496, in _make_request
+    conn.request(
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connection.py", line 400, in request
+    self.endheaders()
+  File "/usr/local/lib/python3.12/http/client.py", line 1331, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.12/http/client.py", line 1091, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.12/http/client.py", line 1035, in send
+    self.connect()
+  File "/home/airflow/.local/lib/python3.12/site-packages/docker/transport/unixconn.py", line 27, in connect
+    sock.connect(self.unix_socket)
+FileNotFoundError: [Errno 2] No such file or directory
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 847, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/util/retry.py", line 470, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/util/util.py", line 38, in reraise
+    raise value.with_traceback(tb)
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 793, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 496, in _make_request
+    conn.request(
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connection.py", line 400, in request
+    self.endheaders()
+  File "/usr/local/lib/python3.12/http/client.py", line 1331, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.12/http/client.py", line 1091, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.12/http/client.py", line 1035, in send
+    self.connect()
+  File "/home/airflow/.local/lib/python3.12/site-packages/docker/transport/unixconn.py", line 27, in connect
+    sock.connect(self.unix_socket)
+urllib3.exceptions.ProtocolError: ('Connection aborted.', FileNotFoundError(2, 'No such file or directory'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/docker/api/client.py", line 213, in _retrieve_server_version
+    return self.version(api_version=False)["ApiVersion"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docker/api/daemon.py", line 181, in version
+    return self._result(self._get(url), json=True)
+                        ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docker/utils/decorators.py", line 44, in inner
+    return f(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docker/api/client.py", line 236, in _get
+    return self.get(url, **self._set_request_timeout(kwargs))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/sessions.py", line 602, in get
+    return self.request("GET", url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/adapters.py", line 501, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', FileNotFoundError(2, 'No such file or directory'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/container_monitoring.py", line 22, in monitor_containers
+    if is_container_running(container_name):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/container_monitoring.py", line 9, in is_container_running
+    client = docker.from_env()
+             ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docker/client.py", line 94, in from_env
+    return cls(
+           ^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docker/client.py", line 45, in __init__
+    self.api = APIClient(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docker/api/client.py", line 197, in __init__
+    self._version = self._retrieve_server_version()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docker/api/client.py", line 220, in _retrieve_server_version
+    raise DockerException(
+docker.errors.DockerException: Error while fetching server API version: ('Connection aborted.', FileNotFoundError(2, 'No such file or directory'))
+[2024-05-30T16:53:38.499+0000] {taskinstance.py:1206} INFO - Marking task as FAILED. dag_id=container_monitoring, task_id=monitor_containers, run_id=scheduled__2024-05-30T15:00:00+00:00, execution_date=20240530T150000, start_date=20240530T165337, end_date=20240530T165338
+[2024-05-30T16:53:38.697+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 510 for task monitor_containers (Error while fetching server API version: ('Connection aborted.', FileNotFoundError(2, 'No such file or directory')); 116)
+[2024-05-30T16:53:38.759+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2024-05-30T16:53:38.816+0000] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-05-30T16:53:38.822+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2024-05-30T22:02:25.919+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-05-30T22:02:26.030+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: container_monitoring.monitor_containers scheduled__2024-05-30T15:00:00+00:00 [queued]>
+[2024-05-30T22:02:26.061+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: container_monitoring.monitor_containers scheduled__2024-05-30T15:00:00+00:00 [queued]>
+[2024-05-30T22:02:26.062+0000] {taskinstance.py:2306} INFO - Starting attempt 2 of 2
+[2024-05-30T22:02:26.124+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): monitor_containers> on 2024-05-30 15:00:00+00:00
+[2024-05-30T22:02:26.131+0000] {standard_task_runner.py:63} INFO - Started process 490 to run task
+[2024-05-30T22:02:26.134+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'container_monitoring', 'monitor_containers', 'scheduled__2024-05-30T15:00:00+00:00', '--job-id', '604', '--raw', '--subdir', 'DAGS_FOLDER/container_monitoring.py', '--cfg-path', '/tmp/tmptyv9da3q']
+[2024-05-30T22:02:26.136+0000] {standard_task_runner.py:91} INFO - Job 604: Subtask monitor_containers
+[2024-05-30T22:02:26.383+0000] {task_command.py:426} INFO - Running <TaskInstance: container_monitoring.monitor_containers scheduled__2024-05-30T15:00:00+00:00 [running]> on host f708138922bb
+[2024-05-30T22:02:26.547+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='container_monitoring' AIRFLOW_CTX_TASK_ID='monitor_containers' AIRFLOW_CTX_EXECUTION_DATE='2024-05-30T15:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-05-30T15:00:00+00:00'
+[2024-05-30T22:02:26.548+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-05-30T22:02:26.567+0000] {container_monitoring.py:30} ERROR - Error monitoring containers: Error while fetching server API version: ('Connection aborted.', FileNotFoundError(2, 'No such file or directory'))
+[2024-05-30T22:02:26.567+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-05-30T22:02:26.568+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 793, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 496, in _make_request
+    conn.request(
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connection.py", line 400, in request
+    self.endheaders()
+  File "/usr/local/lib/python3.12/http/client.py", line 1331, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.12/http/client.py", line 1091, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.12/http/client.py", line 1035, in send
+    self.connect()
+  File "/home/airflow/.local/lib/python3.12/site-packages/docker/transport/unixconn.py", line 27, in connect
+    sock.connect(self.unix_socket)
+FileNotFoundError: [Errno 2] No such file or directory
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 847, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/util/retry.py", line 470, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/util/util.py", line 38, in reraise
+    raise value.with_traceback(tb)
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 793, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 496, in _make_request
+    conn.request(
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connection.py", line 400, in request
+    self.endheaders()
+  File "/usr/local/lib/python3.12/http/client.py", line 1331, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.12/http/client.py", line 1091, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.12/http/client.py", line 1035, in send
+    self.connect()
+  File "/home/airflow/.local/lib/python3.12/site-packages/docker/transport/unixconn.py", line 27, in connect
+    sock.connect(self.unix_socket)
+urllib3.exceptions.ProtocolError: ('Connection aborted.', FileNotFoundError(2, 'No such file or directory'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/docker/api/client.py", line 213, in _retrieve_server_version
+    return self.version(api_version=False)["ApiVersion"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docker/api/daemon.py", line 181, in version
+    return self._result(self._get(url), json=True)
+                        ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docker/utils/decorators.py", line 44, in inner
+    return f(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docker/api/client.py", line 236, in _get
+    return self.get(url, **self._set_request_timeout(kwargs))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/sessions.py", line 602, in get
+    return self.request("GET", url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/adapters.py", line 501, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', FileNotFoundError(2, 'No such file or directory'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/container_monitoring.py", line 22, in monitor_containers
+    if is_container_running(container_name):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/container_monitoring.py", line 9, in is_container_running
+    client = docker.from_env()
+             ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docker/client.py", line 94, in from_env
+    return cls(
+           ^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docker/client.py", line 45, in __init__
+    self.api = APIClient(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docker/api/client.py", line 197, in __init__
+    self._version = self._retrieve_server_version()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docker/api/client.py", line 220, in _retrieve_server_version
+    raise DockerException(
+docker.errors.DockerException: Error while fetching server API version: ('Connection aborted.', FileNotFoundError(2, 'No such file or directory'))
+[2024-05-30T22:02:26.600+0000] {taskinstance.py:1206} INFO - Marking task as FAILED. dag_id=container_monitoring, task_id=monitor_containers, run_id=scheduled__2024-05-30T15:00:00+00:00, execution_date=20240530T150000, start_date=20240530T220226, end_date=20240530T220226
+[2024-05-30T22:02:26.650+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 604 for task monitor_containers (Error while fetching server API version: ('Connection aborted.', FileNotFoundError(2, 'No such file or directory')); 490)
+[2024-05-30T22:02:26.668+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2024-05-30T22:02:26.699+0000] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-05-30T22:02:26.701+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

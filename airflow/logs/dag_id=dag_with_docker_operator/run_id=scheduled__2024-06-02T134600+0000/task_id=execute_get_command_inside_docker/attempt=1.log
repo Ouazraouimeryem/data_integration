@@ -1,0 +1,36 @@
+[2024-06-02T13:59:54.757+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-06-02T13:59:54.816+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_with_docker_operator.execute_get_command_inside_docker scheduled__2024-06-02T13:46:00+00:00 [queued]>
+[2024-06-02T13:59:54.863+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_with_docker_operator.execute_get_command_inside_docker scheduled__2024-06-02T13:46:00+00:00 [queued]>
+[2024-06-02T13:59:54.865+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2024-06-02T13:59:55.113+0000] {taskinstance.py:2330} INFO - Executing <Task(DockerOperator): execute_get_command_inside_docker> on 2024-06-02 13:46:00+00:00
+[2024-06-02T13:59:55.120+0000] {standard_task_runner.py:63} INFO - Started process 4404 to run task
+[2024-06-02T13:59:55.126+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'dag_with_docker_operator', 'execute_get_command_inside_docker', 'scheduled__2024-06-02T13:46:00+00:00', '--job-id', '1031', '--raw', '--subdir', 'DAGS_FOLDER/dag_with_docker_operator.py', '--cfg-path', '/tmp/tmpujdl6l8v']
+[2024-06-02T13:59:55.129+0000] {standard_task_runner.py:91} INFO - Job 1031: Subtask execute_get_command_inside_docker
+[2024-06-02T13:59:55.281+0000] {task_command.py:426} INFO - Running <TaskInstance: dag_with_docker_operator.execute_get_command_inside_docker scheduled__2024-06-02T13:46:00+00:00 [running]> on host 9c47fcd741af
+[2024-06-02T13:59:55.556+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='dag_with_docker_operator' AIRFLOW_CTX_TASK_ID='execute_get_command_inside_docker' AIRFLOW_CTX_EXECUTION_DATE='2024-06-02T13:46:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-06-02T13:46:00+00:00'
+[2024-06-02T13:59:55.558+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-06-02T13:59:55.640+0000] {docker.py:366} INFO - Starting docker container from image composer-flask:latest
+[2024-06-02T13:59:55.659+0000] {docker.py:374} WARNING - Using remote engine or docker-in-docker and mounting temporary volume from host is not supported. Falling back to `mount_tmp_dir=False` mode. You can set `mount_tmp_dir` parameter to False to disable mounting and remove the warning
+[2024-06-02T13:59:56.825+0000] {docker.py:436} INFO - % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+[2024-06-02T13:59:58.031+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0
+[2024-06-02T13:59:59.032+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0
+[2024-06-02T13:59:59.332+0000] {docker.py:436} INFO - <!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="refresh" content="0;url='http://localhost/setup'" />
+
+        <title>Redirecting to http://localhost/setup</title>
+    </head>
+    <body>
+        Redirecting to <a href="http://localhost/setup">http://localhost/setup</a>.
+    </body>
+</html>
+[2024-06-02T13:59:59.334+0000] {docker.py:436} INFO - 100   334  100   334    0     0    133      0  0:00:02  0:00:02 --:--:--   133
+[2024-06-02T14:00:02.048+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-06-02T14:00:02.249+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=dag_with_docker_operator, task_id=execute_get_command_inside_docker, run_id=scheduled__2024-06-02T13:46:00+00:00, execution_date=20240602T134600, start_date=20240602T135954, end_date=20240602T140002
+[2024-06-02T14:00:02.414+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-06-02T14:00:05.101+0000] {taskinstance.py:3498} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-06-02T14:00:05.147+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

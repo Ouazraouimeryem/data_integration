@@ -1,0 +1,17 @@
+[2024-05-30T09:19:30.024+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-05-30T09:19:30.162+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: flask_monitoring.check_flask_health scheduled__2024-05-29T04:05:00+00:00 [queued]>
+[2024-05-30T09:19:30.230+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: flask_monitoring.check_flask_health scheduled__2024-05-29T04:05:00+00:00 [queued]>
+[2024-05-30T09:19:30.232+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2024-05-30T09:19:30.348+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): check_flask_health> on 2024-05-29 04:05:00+00:00
+[2024-05-30T09:19:30.359+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'flask_monitoring', 'check_flask_health', 'scheduled__2024-05-29T04:05:00+00:00', '--job-id', '380', '--raw', '--subdir', 'DAGS_FOLDER/flask_monitoring.py', '--cfg-path', '/tmp/tmp1jgsqo9o']
+[2024-05-30T09:19:30.363+0000] {standard_task_runner.py:91} INFO - Job 380: Subtask check_flask_health
+[2024-05-30T09:19:30.364+0000] {standard_task_runner.py:63} INFO - Started process 1395 to run task
+[2024-05-30T09:19:30.908+0000] {task_command.py:426} INFO - Running <TaskInstance: flask_monitoring.check_flask_health scheduled__2024-05-29T04:05:00+00:00 [running]> on host f708138922bb
+[2024-05-30T09:19:31.403+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='flask_monitoring' AIRFLOW_CTX_TASK_ID='check_flask_health' AIRFLOW_CTX_EXECUTION_DATE='2024-05-29T04:05:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-05-29T04:05:00+00:00'
+[2024-05-30T09:19:31.406+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-05-30T09:19:31.493+0000] {python.py:237} INFO - Done. Returned value was: None
+[2024-05-30T09:19:31.521+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-05-30T09:19:31.656+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=flask_monitoring, task_id=check_flask_health, run_id=scheduled__2024-05-29T04:05:00+00:00, execution_date=20240529T040500, start_date=20240530T091930, end_date=20240530T091931
+[2024-05-30T09:19:31.827+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-05-30T09:19:32.069+0000] {taskinstance.py:3498} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-05-30T09:19:32.087+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

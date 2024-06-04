@@ -1,0 +1,263 @@
+[2024-05-30T14:10:17.926+0000] {processor.py:161} INFO - Started process (PID=1206) to work on /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:10:17.928+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/monitor_containers.py for tasks to queue
+[2024-05-30T14:10:17.931+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:10:17.930+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:10:17.978+0000] {processor.py:840} INFO - DAG(s) 'monitor_containers' retrieved from /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:10:18.734+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:10:18.733+0000] {override.py:1829} INFO - Created Permission View: can delete on DAG:monitor_containers
+[2024-05-30T14:10:18.801+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:10:18.800+0000] {override.py:1829} INFO - Created Permission View: can read on DAG:monitor_containers
+[2024-05-30T14:10:18.928+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:10:18.927+0000] {override.py:1829} INFO - Created Permission View: can edit on DAG:monitor_containers
+[2024-05-30T14:10:18.930+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:10:18.929+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-05-30T14:10:18.978+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:10:18.977+0000] {dag.py:3118} INFO - Creating ORM DAG for monitor_containers
+[2024-05-30T14:10:18.996+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:10:18.995+0000] {dag.py:3954} INFO - Setting next_dagrun for monitor_containers to 2023-01-01 00:00:00+00:00, run_after=2023-01-01 00:10:00+00:00
+[2024-05-30T14:10:19.138+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/monitor_containers.py took 1.231 seconds
+[2024-05-30T14:10:49.401+0000] {processor.py:161} INFO - Started process (PID=1207) to work on /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:10:49.404+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/monitor_containers.py for tasks to queue
+[2024-05-30T14:10:49.407+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:10:49.406+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:10:49.467+0000] {processor.py:840} INFO - DAG(s) 'monitor_containers' retrieved from /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:10:49.560+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:10:49.560+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-05-30T14:10:49.630+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:10:49.630+0000] {dag.py:3954} INFO - Setting next_dagrun for monitor_containers to 2023-01-01 00:00:00+00:00, run_after=2023-01-01 00:10:00+00:00
+[2024-05-30T14:10:49.727+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/monitor_containers.py took 0.343 seconds
+[2024-05-30T14:11:20.737+0000] {processor.py:161} INFO - Started process (PID=1208) to work on /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:11:20.739+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/monitor_containers.py for tasks to queue
+[2024-05-30T14:11:20.749+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:11:20.748+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:11:20.802+0000] {processor.py:840} INFO - DAG(s) 'monitor_containers' retrieved from /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:11:20.947+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:11:20.946+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-05-30T14:11:21.085+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:11:21.085+0000] {dag.py:3954} INFO - Setting next_dagrun for monitor_containers to 2023-01-01 00:00:00+00:00, run_after=2023-01-01 00:10:00+00:00
+[2024-05-30T14:11:21.682+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/monitor_containers.py took 0.980 seconds
+[2024-05-30T14:11:53.442+0000] {processor.py:161} INFO - Started process (PID=1209) to work on /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:11:53.454+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/monitor_containers.py for tasks to queue
+[2024-05-30T14:11:53.456+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:11:53.456+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:11:53.487+0000] {processor.py:840} INFO - DAG(s) 'monitor_containers' retrieved from /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:11:53.547+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:11:53.547+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-05-30T14:11:53.620+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:11:53.620+0000] {dag.py:3954} INFO - Setting next_dagrun for monitor_containers to 2023-01-01 00:00:00+00:00, run_after=2023-01-01 00:10:00+00:00
+[2024-05-30T14:11:53.784+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/monitor_containers.py took 0.349 seconds
+[2024-05-30T14:12:25.448+0000] {processor.py:161} INFO - Started process (PID=1210) to work on /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:12:25.450+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/monitor_containers.py for tasks to queue
+[2024-05-30T14:12:25.455+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:12:25.454+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:12:25.489+0000] {processor.py:840} INFO - DAG(s) 'monitor_containers' retrieved from /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:12:25.547+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:12:25.547+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-05-30T14:12:25.798+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:12:25.798+0000] {dag.py:3954} INFO - Setting next_dagrun for monitor_containers to 2023-01-01 00:00:00+00:00, run_after=2023-01-01 00:10:00+00:00
+[2024-05-30T14:12:25.930+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/monitor_containers.py took 0.490 seconds
+[2024-05-30T14:12:56.610+0000] {processor.py:161} INFO - Started process (PID=1211) to work on /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:12:56.611+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/monitor_containers.py for tasks to queue
+[2024-05-30T14:12:56.614+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:12:56.612+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:12:56.639+0000] {processor.py:840} INFO - DAG(s) 'monitor_containers' retrieved from /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:12:56.691+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:12:56.690+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-05-30T14:12:56.739+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:12:56.739+0000] {dag.py:3954} INFO - Setting next_dagrun for monitor_containers to 2023-01-01 00:00:00+00:00, run_after=2023-01-01 00:10:00+00:00
+[2024-05-30T14:12:56.836+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/monitor_containers.py took 0.234 seconds
+[2024-05-30T14:13:27.259+0000] {processor.py:161} INFO - Started process (PID=1212) to work on /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:13:27.261+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/monitor_containers.py for tasks to queue
+[2024-05-30T14:13:27.266+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:13:27.264+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:13:27.337+0000] {processor.py:840} INFO - DAG(s) 'monitor_containers' retrieved from /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:13:27.384+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:13:27.383+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-05-30T14:13:27.427+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:13:27.427+0000] {dag.py:3954} INFO - Setting next_dagrun for monitor_containers to 2023-01-01 00:00:00+00:00, run_after=2023-01-01 00:10:00+00:00
+[2024-05-30T14:13:27.513+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/monitor_containers.py took 0.271 seconds
+[2024-05-30T14:14:02.900+0000] {processor.py:161} INFO - Started process (PID=1239) to work on /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:14:02.904+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/monitor_containers.py for tasks to queue
+[2024-05-30T14:14:02.907+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:14:02.906+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:14:02.961+0000] {processor.py:840} INFO - DAG(s) 'monitor_containers' retrieved from /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:14:03.163+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:14:03.160+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-05-30T14:14:03.249+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:14:03.248+0000] {dag.py:3954} INFO - Setting next_dagrun for monitor_containers to 2023-01-01 00:20:00+00:00, run_after=2023-01-01 00:30:00+00:00
+[2024-05-30T14:14:03.417+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/monitor_containers.py took 0.550 seconds
+[2024-05-30T14:14:43.390+0000] {processor.py:161} INFO - Started process (PID=1280) to work on /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:14:43.392+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/monitor_containers.py for tasks to queue
+[2024-05-30T14:14:43.396+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:14:43.395+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:14:43.422+0000] {processor.py:840} INFO - DAG(s) 'monitor_containers' retrieved from /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:14:43.494+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:14:43.492+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-05-30T14:14:43.531+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:14:43.531+0000] {dag.py:3954} INFO - Setting next_dagrun for monitor_containers to 2023-01-01 00:50:00+00:00, run_after=2023-01-01 01:00:00+00:00
+[2024-05-30T14:14:43.732+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/monitor_containers.py took 0.351 seconds
+[2024-05-30T14:15:22.537+0000] {processor.py:161} INFO - Started process (PID=1322) to work on /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:15:22.716+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/monitor_containers.py for tasks to queue
+[2024-05-30T14:15:22.734+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:15:22.733+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:15:23.160+0000] {processor.py:840} INFO - DAG(s) 'monitor_containers' retrieved from /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:15:23.392+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:15:23.391+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-05-30T14:15:23.571+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:15:23.571+0000] {dag.py:3954} INFO - Setting next_dagrun for monitor_containers to 2023-01-01 01:20:00+00:00, run_after=2023-01-01 01:30:00+00:00
+[2024-05-30T14:15:24.647+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/monitor_containers.py took 2.131 seconds
+[2024-05-30T14:15:55.980+0000] {processor.py:161} INFO - Started process (PID=1350) to work on /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:15:55.981+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/monitor_containers.py for tasks to queue
+[2024-05-30T14:15:55.986+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:15:55.985+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:15:56.011+0000] {processor.py:840} INFO - DAG(s) 'monitor_containers' retrieved from /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:15:56.102+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:15:56.101+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-05-30T14:15:56.148+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:15:56.148+0000] {dag.py:3954} INFO - Setting next_dagrun for monitor_containers to 2023-01-01 01:40:00+00:00, run_after=2023-01-01 01:50:00+00:00
+[2024-05-30T14:15:56.282+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/monitor_containers.py took 0.310 seconds
+[2024-05-30T14:16:39.110+0000] {processor.py:161} INFO - Started process (PID=1390) to work on /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:16:39.112+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/monitor_containers.py for tasks to queue
+[2024-05-30T14:16:39.114+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:16:39.113+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:16:39.143+0000] {processor.py:840} INFO - DAG(s) 'monitor_containers' retrieved from /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:16:39.233+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:16:39.232+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-05-30T14:16:39.281+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:16:39.281+0000] {dag.py:3954} INFO - Setting next_dagrun for monitor_containers to 2023-01-01 02:10:00+00:00, run_after=2023-01-01 02:20:00+00:00
+[2024-05-30T14:16:39.620+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/monitor_containers.py took 0.521 seconds
+[2024-05-30T14:17:24.949+0000] {processor.py:161} INFO - Started process (PID=1417) to work on /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:17:24.968+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/monitor_containers.py for tasks to queue
+[2024-05-30T14:17:24.971+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:17:24.970+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:17:25.023+0000] {processor.py:840} INFO - DAG(s) 'monitor_containers' retrieved from /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:17:25.120+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:17:25.120+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-05-30T14:17:25.221+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:17:25.220+0000] {dag.py:3954} INFO - Setting next_dagrun for monitor_containers to 2023-01-01 02:30:00+00:00, run_after=2023-01-01 02:40:00+00:00
+[2024-05-30T14:17:25.415+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/monitor_containers.py took 0.488 seconds
+[2024-05-30T14:17:58.743+0000] {processor.py:161} INFO - Started process (PID=1431) to work on /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:17:58.748+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/monitor_containers.py for tasks to queue
+[2024-05-30T14:17:58.751+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:17:58.751+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:17:58.790+0000] {processor.py:840} INFO - DAG(s) 'monitor_containers' retrieved from /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:17:58.860+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:17:58.860+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-05-30T14:17:59.036+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/monitor_containers.py took 0.307 seconds
+[2024-05-30T14:18:29.763+0000] {processor.py:161} INFO - Started process (PID=1432) to work on /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:18:29.774+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/monitor_containers.py for tasks to queue
+[2024-05-30T14:18:29.778+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:18:29.777+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:18:29.833+0000] {processor.py:840} INFO - DAG(s) 'monitor_containers' retrieved from /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:18:30.043+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:18:30.042+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-05-30T14:18:30.724+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/monitor_containers.py took 0.988 seconds
+[2024-05-30T14:19:05.831+0000] {processor.py:161} INFO - Started process (PID=1446) to work on /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:19:05.835+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/monitor_containers.py for tasks to queue
+[2024-05-30T14:19:05.839+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:19:05.837+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:19:05.881+0000] {processor.py:840} INFO - DAG(s) 'monitor_containers' retrieved from /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:19:06.020+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:19:06.019+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-05-30T14:19:07.558+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/monitor_containers.py took 1.748 seconds
+[2024-05-30T14:19:39.174+0000] {processor.py:161} INFO - Started process (PID=1473) to work on /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:19:39.176+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/monitor_containers.py for tasks to queue
+[2024-05-30T14:19:39.179+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:19:39.178+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:19:39.273+0000] {processor.py:840} INFO - DAG(s) 'monitor_containers' retrieved from /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:19:39.488+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:19:39.487+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-05-30T14:19:39.725+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/monitor_containers.py took 0.585 seconds
+[2024-05-30T14:20:12.281+0000] {processor.py:161} INFO - Started process (PID=1500) to work on /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:20:12.289+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/monitor_containers.py for tasks to queue
+[2024-05-30T14:20:12.292+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:20:12.291+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:20:12.345+0000] {processor.py:840} INFO - DAG(s) 'monitor_containers' retrieved from /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:20:12.474+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:20:12.474+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-05-30T14:20:12.564+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:20:12.564+0000] {dag.py:3954} INFO - Setting next_dagrun for monitor_containers to 2023-01-01 02:40:00+00:00, run_after=2023-01-01 02:50:00+00:00
+[2024-05-30T14:20:12.808+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/monitor_containers.py took 0.550 seconds
+[2024-05-30T14:21:11.815+0000] {processor.py:161} INFO - Started process (PID=1542) to work on /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:21:11.816+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/monitor_containers.py for tasks to queue
+[2024-05-30T14:21:11.818+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:21:11.817+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:21:11.848+0000] {processor.py:840} INFO - DAG(s) 'monitor_containers' retrieved from /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:21:11.922+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:21:11.921+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-05-30T14:21:12.056+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:21:12.055+0000] {dag.py:3954} INFO - Setting next_dagrun for monitor_containers to 2023-01-01 02:50:00+00:00, run_after=2023-01-01 03:00:00+00:00
+[2024-05-30T14:21:12.658+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/monitor_containers.py took 0.851 seconds
+[2024-05-30T14:22:01.698+0000] {processor.py:161} INFO - Started process (PID=1608) to work on /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:22:01.700+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/monitor_containers.py for tasks to queue
+[2024-05-30T14:22:01.703+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:22:01.702+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:22:01.736+0000] {processor.py:840} INFO - DAG(s) 'monitor_containers' retrieved from /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:22:01.783+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:22:01.783+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-05-30T14:22:01.817+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:22:01.817+0000] {dag.py:3954} INFO - Setting next_dagrun for monitor_containers to 2023-01-01 03:00:00+00:00, run_after=2023-01-01 03:10:00+00:00
+[2024-05-30T14:22:01.923+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/monitor_containers.py took 0.233 seconds
+[2024-05-30T14:22:47.670+0000] {processor.py:161} INFO - Started process (PID=1674) to work on /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:22:47.677+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/monitor_containers.py for tasks to queue
+[2024-05-30T14:22:47.683+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:22:47.682+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:22:47.737+0000] {processor.py:840} INFO - DAG(s) 'monitor_containers' retrieved from /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:22:47.866+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:22:47.866+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-05-30T14:22:47.943+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:22:47.943+0000] {dag.py:3954} INFO - Setting next_dagrun for monitor_containers to 2023-01-01 03:10:00+00:00, run_after=2023-01-01 03:20:00+00:00
+[2024-05-30T14:22:48.091+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/monitor_containers.py took 0.442 seconds
+[2024-05-30T14:23:20.692+0000] {processor.py:161} INFO - Started process (PID=1701) to work on /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:23:20.695+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/monitor_containers.py for tasks to queue
+[2024-05-30T14:23:20.698+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:23:20.697+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:23:20.795+0000] {processor.py:840} INFO - DAG(s) 'monitor_containers' retrieved from /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:23:20.935+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:23:20.935+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-05-30T14:23:21.035+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:23:21.035+0000] {dag.py:3954} INFO - Setting next_dagrun for monitor_containers to 2023-01-01 03:20:00+00:00, run_after=2023-01-01 03:30:00+00:00
+[2024-05-30T14:23:21.251+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/monitor_containers.py took 0.577 seconds
+[2024-05-30T14:24:04.584+0000] {processor.py:161} INFO - Started process (PID=1728) to work on /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:24:04.587+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/monitor_containers.py for tasks to queue
+[2024-05-30T14:24:04.591+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:24:04.590+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:24:04.637+0000] {processor.py:840} INFO - DAG(s) 'monitor_containers' retrieved from /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:24:04.707+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:24:04.707+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-05-30T14:24:04.781+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:24:04.780+0000] {dag.py:3954} INFO - Setting next_dagrun for monitor_containers to 2023-01-01 03:40:00+00:00, run_after=2023-01-01 03:50:00+00:00
+[2024-05-30T14:24:04.905+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/monitor_containers.py took 0.342 seconds
+[2024-05-30T14:24:46.612+0000] {processor.py:161} INFO - Started process (PID=1769) to work on /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:24:46.616+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/monitor_containers.py for tasks to queue
+[2024-05-30T14:24:46.626+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:24:46.625+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:24:46.687+0000] {processor.py:840} INFO - DAG(s) 'monitor_containers' retrieved from /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:24:46.775+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:24:46.775+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-05-30T14:24:46.821+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:24:46.820+0000] {dag.py:3954} INFO - Setting next_dagrun for monitor_containers to 2023-01-01 04:10:00+00:00, run_after=2023-01-01 04:20:00+00:00
+[2024-05-30T14:24:46.968+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/monitor_containers.py took 0.374 seconds
+[2024-05-30T14:25:27.597+0000] {processor.py:161} INFO - Started process (PID=1796) to work on /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:25:27.599+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/monitor_containers.py for tasks to queue
+[2024-05-30T14:25:27.601+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:25:27.600+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:25:27.633+0000] {processor.py:840} INFO - DAG(s) 'monitor_containers' retrieved from /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:25:27.765+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:25:27.765+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-05-30T14:25:27.906+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:25:27.905+0000] {dag.py:3954} INFO - Setting next_dagrun for monitor_containers to 2023-01-01 04:30:00+00:00, run_after=2023-01-01 04:40:00+00:00
+[2024-05-30T14:25:28.119+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/monitor_containers.py took 0.532 seconds
+[2024-05-30T14:26:19.897+0000] {processor.py:161} INFO - Started process (PID=1850) to work on /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:26:19.904+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/monitor_containers.py for tasks to queue
+[2024-05-30T14:26:19.910+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:26:19.909+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:26:19.973+0000] {processor.py:840} INFO - DAG(s) 'monitor_containers' retrieved from /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:26:20.133+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:26:20.127+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-05-30T14:26:20.252+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:26:20.252+0000] {dag.py:3954} INFO - Setting next_dagrun for monitor_containers to 2023-01-01 05:10:00+00:00, run_after=2023-01-01 05:20:00+00:00
+[2024-05-30T14:26:20.580+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/monitor_containers.py took 0.701 seconds
+[2024-05-30T14:26:55.544+0000] {processor.py:161} INFO - Started process (PID=1877) to work on /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:26:55.550+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/monitor_containers.py for tasks to queue
+[2024-05-30T14:26:55.554+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:26:55.553+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:26:55.674+0000] {processor.py:840} INFO - DAG(s) 'monitor_containers' retrieved from /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:26:55.832+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:26:55.831+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-05-30T14:26:56.277+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/monitor_containers.py took 0.752 seconds
+[2024-05-30T14:27:26.754+0000] {processor.py:161} INFO - Started process (PID=1892) to work on /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:27:26.964+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/monitor_containers.py for tasks to queue
+[2024-05-30T14:27:26.969+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:27:26.967+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:27:27.096+0000] {processor.py:840} INFO - DAG(s) 'monitor_containers' retrieved from /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:27:27.147+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:27:27.147+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-05-30T14:27:27.414+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:27:27.414+0000] {dag.py:3954} INFO - Setting next_dagrun for monitor_containers to 2023-01-01 05:20:00+00:00, run_after=2023-01-01 05:30:00+00:00
+[2024-05-30T14:27:27.857+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/monitor_containers.py took 1.116 seconds
+[2024-05-30T14:27:59.022+0000] {processor.py:161} INFO - Started process (PID=1932) to work on /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:27:59.024+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/monitor_containers.py for tasks to queue
+[2024-05-30T14:27:59.026+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:27:59.026+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:27:59.062+0000] {processor.py:840} INFO - DAG(s) 'monitor_containers' retrieved from /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:27:59.187+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:27:59.187+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-05-30T14:27:59.275+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:27:59.275+0000] {dag.py:3954} INFO - Setting next_dagrun for monitor_containers to 2023-01-01 05:40:00+00:00, run_after=2023-01-01 05:50:00+00:00
+[2024-05-30T14:27:59.792+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/monitor_containers.py took 0.790 seconds
+[2024-05-30T14:28:30.739+0000] {processor.py:161} INFO - Started process (PID=1960) to work on /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:28:30.750+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/monitor_containers.py for tasks to queue
+[2024-05-30T14:28:30.752+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:28:30.751+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:28:30.782+0000] {processor.py:840} INFO - DAG(s) 'monitor_containers' retrieved from /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:28:30.936+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:28:30.935+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-05-30T14:28:30.995+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:28:30.994+0000] {dag.py:3954} INFO - Setting next_dagrun for monitor_containers to 2023-01-01 05:50:00+00:00, run_after=2023-01-01 06:00:00+00:00
+[2024-05-30T14:28:31.118+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/monitor_containers.py took 0.388 seconds
+[2024-05-30T14:29:01.823+0000] {processor.py:161} INFO - Started process (PID=1988) to work on /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:29:01.824+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/monitor_containers.py for tasks to queue
+[2024-05-30T14:29:01.825+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:29:01.825+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:29:01.853+0000] {processor.py:840} INFO - DAG(s) 'monitor_containers' retrieved from /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:29:01.895+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:29:01.894+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-05-30T14:29:01.931+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:29:01.931+0000] {dag.py:3954} INFO - Setting next_dagrun for monitor_containers to 2023-01-01 06:00:00+00:00, run_after=2023-01-01 06:10:00+00:00
+[2024-05-30T14:29:02.015+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/monitor_containers.py took 0.199 seconds
+[2024-05-30T14:29:44.223+0000] {processor.py:161} INFO - Started process (PID=2042) to work on /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:29:44.225+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/monitor_containers.py for tasks to queue
+[2024-05-30T14:29:44.235+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:29:44.234+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:29:44.269+0000] {processor.py:840} INFO - DAG(s) 'monitor_containers' retrieved from /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:29:44.371+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:29:44.370+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-05-30T14:29:44.533+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/monitor_containers.py took 0.319 seconds
+[2024-05-30T14:30:22.403+0000] {processor.py:161} INFO - Started process (PID=2069) to work on /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:30:22.404+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/monitor_containers.py for tasks to queue
+[2024-05-30T14:30:22.406+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:30:22.405+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:30:22.425+0000] {processor.py:840} INFO - DAG(s) 'monitor_containers' retrieved from /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:30:22.470+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:30:22.469+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-05-30T14:30:22.502+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:30:22.502+0000] {dag.py:3954} INFO - Setting next_dagrun for monitor_containers to 2023-01-01 06:10:00+00:00, run_after=2023-01-01 06:20:00+00:00
+[2024-05-30T14:30:22.646+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/monitor_containers.py took 0.250 seconds
+[2024-05-30T14:31:10.580+0000] {processor.py:161} INFO - Started process (PID=2149) to work on /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:31:10.582+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/monitor_containers.py for tasks to queue
+[2024-05-30T14:31:10.585+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:31:10.584+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:31:10.610+0000] {processor.py:840} INFO - DAG(s) 'monitor_containers' retrieved from /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:31:10.654+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:31:10.654+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-05-30T14:31:10.686+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:31:10.686+0000] {dag.py:3954} INFO - Setting next_dagrun for monitor_containers to 2023-01-01 06:40:00+00:00, run_after=2023-01-01 06:50:00+00:00
+[2024-05-30T14:31:10.829+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/monitor_containers.py took 0.257 seconds
+[2024-05-30T14:31:49.981+0000] {processor.py:161} INFO - Started process (PID=2204) to work on /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:31:49.983+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/monitor_containers.py for tasks to queue
+[2024-05-30T14:31:49.986+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:31:49.984+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:31:50.013+0000] {processor.py:840} INFO - DAG(s) 'monitor_containers' retrieved from /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:31:50.070+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:31:50.069+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-05-30T14:31:50.102+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:31:50.101+0000] {dag.py:3954} INFO - Setting next_dagrun for monitor_containers to 2023-01-01 07:00:00+00:00, run_after=2023-01-01 07:10:00+00:00
+[2024-05-30T14:31:50.261+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/monitor_containers.py took 0.294 seconds
+[2024-05-30T14:32:21.305+0000] {processor.py:161} INFO - Started process (PID=2232) to work on /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:32:21.307+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/monitor_containers.py for tasks to queue
+[2024-05-30T14:32:21.310+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:32:21.309+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:32:21.339+0000] {processor.py:840} INFO - DAG(s) 'monitor_containers' retrieved from /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:32:21.397+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:32:21.396+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-05-30T14:32:21.436+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:32:21.435+0000] {dag.py:3954} INFO - Setting next_dagrun for monitor_containers to 2023-01-01 07:10:00+00:00, run_after=2023-01-01 07:20:00+00:00
+[2024-05-30T14:32:21.521+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/monitor_containers.py took 0.223 seconds
+[2024-05-30T14:32:56.331+0000] {processor.py:161} INFO - Started process (PID=2288) to work on /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:32:56.364+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/monitor_containers.py for tasks to queue
+[2024-05-30T14:32:56.370+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:32:56.369+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:32:57.200+0000] {processor.py:840} INFO - DAG(s) 'monitor_containers' retrieved from /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:32:57.349+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:32:57.349+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-05-30T14:32:57.445+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:32:57.445+0000] {dag.py:3954} INFO - Setting next_dagrun for monitor_containers to 2023-01-01 07:50:00+00:00, run_after=2023-01-01 08:00:00+00:00
+[2024-05-30T14:32:57.558+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/monitor_containers.py took 1.249 seconds
+[2024-05-30T14:33:36.423+0000] {processor.py:161} INFO - Started process (PID=2342) to work on /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:33:36.427+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/monitor_containers.py for tasks to queue
+[2024-05-30T14:33:36.431+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:33:36.431+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:33:36.465+0000] {processor.py:840} INFO - DAG(s) 'monitor_containers' retrieved from /opt/airflow/dags/monitor_containers.py
+[2024-05-30T14:33:36.593+0000] {logging_mixin.py:188} INFO - [2024-05-30T14:33:36.593+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-05-30T14:33:36.924+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/monitor_containers.py took 0.508 seconds

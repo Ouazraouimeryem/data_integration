@@ -1,0 +1,179 @@
+[2024-06-02T10:42:40.365+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-06-02T10:42:40.445+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_with_docker_operator.execute_get_command_inside_docker scheduled__2024-06-02T02:30:00+00:00 [queued]>
+[2024-06-02T10:42:40.465+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_with_docker_operator.execute_get_command_inside_docker scheduled__2024-06-02T02:30:00+00:00 [queued]>
+[2024-06-02T10:42:40.466+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2024-06-02T10:42:40.610+0000] {taskinstance.py:2330} INFO - Executing <Task(DockerOperator): execute_get_command_inside_docker> on 2024-06-02 02:30:00+00:00
+[2024-06-02T10:42:40.615+0000] {standard_task_runner.py:63} INFO - Started process 1075 to run task
+[2024-06-02T10:42:40.619+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'dag_with_docker_operator', 'execute_get_command_inside_docker', 'scheduled__2024-06-02T02:30:00+00:00', '--job-id', '863', '--raw', '--subdir', 'DAGS_FOLDER/dag_with_docker_operator.py', '--cfg-path', '/tmp/tmp11vk0reo']
+[2024-06-02T10:42:40.621+0000] {standard_task_runner.py:91} INFO - Job 863: Subtask execute_get_command_inside_docker
+[2024-06-02T10:42:40.732+0000] {task_command.py:426} INFO - Running <TaskInstance: dag_with_docker_operator.execute_get_command_inside_docker scheduled__2024-06-02T02:30:00+00:00 [running]> on host 9c47fcd741af
+[2024-06-02T10:42:40.973+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='dag_with_docker_operator' AIRFLOW_CTX_TASK_ID='execute_get_command_inside_docker' AIRFLOW_CTX_EXECUTION_DATE='2024-06-02T02:30:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-06-02T02:30:00+00:00'
+[2024-06-02T10:42:40.975+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-06-02T10:42:41.036+0000] {docker.py:366} INFO - Starting docker container from image composer-flask:latest
+[2024-06-02T10:42:41.054+0000] {docker.py:374} WARNING - Using remote engine or docker-in-docker and mounting temporary volume from host is not supported. Falling back to `mount_tmp_dir=False` mode. You can set `mount_tmp_dir` parameter to False to disable mounting and remove the warning
+[2024-06-02T10:42:41.740+0000] {docker.py:436} INFO - % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+[2024-06-02T10:42:42.488+0000] {docker.py:436} INFO - 16  3791   16   628    0     0    823      0  0:00:04 --:--:--  0:00:04   823
+[2024-06-02T10:42:42.506+0000] {docker.py:436} INFO - 100  3791  100  3791    0     0   4957      0 --:--:-- --:--:-- --:--:--  4955
+[2024-06-02T10:42:42.513+0000] {docker.py:436} INFO - <!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LEAMS</title>
+
+    <link rel="shortcut icon" type="image/ico" href="favicon.ico ">
+    
+    <link rel="stylesheet" href="http://localhost/css/dist/all.css?id=9a1a8d0959114dcf722a">
+    <link rel="shortcut icon" type="image/ico" href="http://localhost/favicon.ico">
+
+    <script nonce="PGGCkN1Dg6803Bc0MaN7RtT33MHilZoowzoa8Zve">
+        window.snipeit = {
+            settings: {
+                "per_page": 50
+            }
+        };
+    </script>
+    <style >[wire\:loading], [wire\:loading\.delay], [wire\:loading\.inline-block], [wire\:loading\.inline], [wire\:loading\.block], [wire\:loading\.flex], [wire\:loading\.table], [wire\:loading\.grid], [wire\:loading\.inline-flex] {display: none;}[wire\:loading\.delay\.shortest], [wire\:loading\.delay\.shorter], [wire\:loading\.delay\.short], [wire\:loading\.delay\.long], [wire\:loading\.delay\.longer], [wire\:loading\.delay\.longest] {display:none;}[wire\:offline] {display: none;}[wire\:dirty]:not(textarea):not(input):not(select) {display: none;}input:-webkit-autofill, select:-webkit-autofill, textarea:-webkit-autofill {animation-duration: 50000s;animation-name: livewireautofill;}@keyframes livewireautofill { from {} }</style>
+
+
+            <style>
+        .main-header .navbar, .main-header .logo {
+        background-color: #e00f38;
+        background: -webkit-linear-gradient(top,  #e00f38 0%,#e00f38 100%);
+        background: linear-gradient(to bottom, #e00f38 0%,#e00f38 100%);
+        border-color: #e00f38;
+        }
+        .skin-blue .sidebar-menu > li:hover > a, .skin-blue .sidebar-menu > li.active > a {
+        border-left-color: #e00f38;
+        }
+
+        .btn-primary {
+        background-color: #e00f38;
+        border-color: #e00f38;
+        }
+
+
+        </style>
+    
+    
+</head>
+
+<body class="hold-transition login-page">
+
+            <center>
+            <a href="http://localhost"><img id="login-logo" src="http://localhost/uploads/setting-logo-iRdtq3wC2V.png"></a>
+        </center>
+      <!-- Content -->
+  
+
+
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+
+    <div style="padding-top: 200px">
+      <img src="http://localhost/img/sad-panda.png" style="width: 200px; height: 200px;" class="pull-left">
+            <div class="error-content">
+              <h2><i class="fas fa-exclamation-triangle text-yellow"></i> 404 Page not found.</h2>
+              <p>
+                Sad panda. We could not find the page you were looking for.
+                You should maybe <a href="http://localhost">return to the dashboard</a>.
+              </p>
+
+    </div>
+</div>
+
+
+
+    <div class="text-center" style="padding-top: 100px;">
+            </div>
+
+    
+    <script src="http://localhost/js/dist/all.js?id=448ec9994dee0c281e8b" nonce="PGGCkN1Dg6803Bc0MaN7RtT33MHilZoowzoa8Zve"></script>
+
+
+        <script src="http://localhost/vendor/livewire/livewire.js?id=c69d0f2801c01fcf8166" data-turbo-eval="false" data-turbolinks-eval="false" ></script><script data-turbo-eval="false" data-turbolinks-eval="false" >window.livewire = new Livewire();window.Livewire = window.livewire;window.livewire_app_url = 'http://localhost';window.livewire_token = 'PGGCkN1Dg6803Bc0MaN7RtT33MHilZoowzoa8Zve';window.deferLoadingAlpine = function (callback) {window.addEventListener('livewire:load', function () {callback();});};let started = false;window.addEventListener('alpine:initializing', function () {if (! started) {window.livewire.start();started = true;}});document.addEventListener("DOMContentLoaded", function () {if (! started) {window.livewire.start();started = true;}});</script>
+</body>
+
+</html>
+[2024-06-02T10:42:43.052+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-06-02T10:42:43.209+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=dag_with_docker_operator, task_id=execute_get_command_inside_docker, run_id=scheduled__2024-06-02T02:30:00+00:00, execution_date=20240602T023000, start_date=20240602T104240, end_date=20240602T104243
+[2024-06-02T10:42:43.295+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-06-02T10:42:43.339+0000] {taskinstance.py:3498} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-06-02T10:42:43.355+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2024-06-02T11:42:02.971+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-06-02T11:42:03.014+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_with_docker_operator.execute_get_command_inside_docker scheduled__2024-06-02T02:30:00+00:00 [queued]>
+[2024-06-02T11:42:03.035+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_with_docker_operator.execute_get_command_inside_docker scheduled__2024-06-02T02:30:00+00:00 [queued]>
+[2024-06-02T11:42:03.036+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2024-06-02T11:42:03.186+0000] {taskinstance.py:2330} INFO - Executing <Task(DockerOperator): execute_get_command_inside_docker> on 2024-06-02 02:30:00+00:00
+[2024-06-02T11:42:03.192+0000] {standard_task_runner.py:63} INFO - Started process 1994 to run task
+[2024-06-02T11:42:03.195+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'dag_with_docker_operator', 'execute_get_command_inside_docker', 'scheduled__2024-06-02T02:30:00+00:00', '--job-id', '862', '--raw', '--subdir', 'DAGS_FOLDER/dag_with_docker_operator.py', '--cfg-path', '/tmp/tmpk_b820ir']
+[2024-06-02T11:42:03.198+0000] {standard_task_runner.py:91} INFO - Job 862: Subtask execute_get_command_inside_docker
+[2024-06-02T11:42:03.302+0000] {task_command.py:426} INFO - Running <TaskInstance: dag_with_docker_operator.execute_get_command_inside_docker scheduled__2024-06-02T02:30:00+00:00 [running]> on host 9c47fcd741af
+[2024-06-02T11:42:03.499+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='dag_with_docker_operator' AIRFLOW_CTX_TASK_ID='execute_get_command_inside_docker' AIRFLOW_CTX_EXECUTION_DATE='2024-06-02T02:30:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-06-02T02:30:00+00:00'
+[2024-06-02T11:42:03.500+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-06-02T11:42:03.577+0000] {docker.py:366} INFO - Starting docker container from image composer-flask:latest
+[2024-06-02T11:42:03.595+0000] {docker.py:374} WARNING - Using remote engine or docker-in-docker and mounting temporary volume from host is not supported. Falling back to `mount_tmp_dir=False` mode. You can set `mount_tmp_dir` parameter to False to disable mounting and remove the warning
+[2024-06-02T11:42:04.232+0000] {docker.py:436} INFO - % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+[2024-06-02T11:42:04.241+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+[2024-06-02T11:42:05.426+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0
+[2024-06-02T11:42:06.427+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0
+[2024-06-02T11:42:06.940+0000] {docker.py:436} INFO - 100   334  100   334    0     0    123      0  0:00:02  0:00:02 --:--:--   123
+[2024-06-02T11:42:06.956+0000] {docker.py:436} INFO - <!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="refresh" content="0;url='http://localhost/setup'" />
+
+        <title>Redirecting to http://localhost/setup</title>
+    </head>
+    <body>
+        Redirecting to <a href="http://localhost/setup">http://localhost/setup</a>.
+    </body>
+</html>
+[2024-06-02T11:42:07.705+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-06-02T11:42:07.858+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=dag_with_docker_operator, task_id=execute_get_command_inside_docker, run_id=scheduled__2024-06-02T02:30:00+00:00, execution_date=20240602T023000, start_date=20240602T114203, end_date=20240602T114207
+[2024-06-02T11:42:07.994+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-06-02T11:42:08.054+0000] {taskinstance.py:3498} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-06-02T11:42:08.071+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2024-06-02T12:41:41.981+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-06-02T12:41:42.030+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_with_docker_operator.execute_get_command_inside_docker scheduled__2024-06-02T02:30:00+00:00 [queued]>
+[2024-06-02T12:41:42.048+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_with_docker_operator.execute_get_command_inside_docker scheduled__2024-06-02T02:30:00+00:00 [queued]>
+[2024-06-02T12:41:42.050+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2024-06-02T12:41:42.117+0000] {taskinstance.py:2330} INFO - Executing <Task(DockerOperator): execute_get_command_inside_docker> on 2024-06-02 02:30:00+00:00
+[2024-06-02T12:41:42.124+0000] {standard_task_runner.py:63} INFO - Started process 3567 to run task
+[2024-06-02T12:41:42.127+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'dag_with_docker_operator', 'execute_get_command_inside_docker', 'scheduled__2024-06-02T02:30:00+00:00', '--job-id', '911', '--raw', '--subdir', 'DAGS_FOLDER/dag_with_docker_operator.py', '--cfg-path', '/tmp/tmpe2mspnir']
+[2024-06-02T12:41:42.129+0000] {standard_task_runner.py:91} INFO - Job 911: Subtask execute_get_command_inside_docker
+[2024-06-02T12:41:42.419+0000] {task_command.py:426} INFO - Running <TaskInstance: dag_with_docker_operator.execute_get_command_inside_docker scheduled__2024-06-02T02:30:00+00:00 [running]> on host 9c47fcd741af
+[2024-06-02T12:41:42.666+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='dag_with_docker_operator' AIRFLOW_CTX_TASK_ID='execute_get_command_inside_docker' AIRFLOW_CTX_EXECUTION_DATE='2024-06-02T02:30:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-06-02T02:30:00+00:00'
+[2024-06-02T12:41:42.668+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-06-02T12:41:42.829+0000] {docker.py:366} INFO - Starting docker container from image composer-flask:latest
+[2024-06-02T12:41:42.954+0000] {docker.py:374} WARNING - Using remote engine or docker-in-docker and mounting temporary volume from host is not supported. Falling back to `mount_tmp_dir=False` mode. You can set `mount_tmp_dir` parameter to False to disable mounting and remove the warning
+[2024-06-02T12:41:45.035+0000] {docker.py:436} INFO - % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+[2024-06-02T12:41:45.036+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+[2024-06-02T12:41:46.327+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0
+[2024-06-02T12:41:47.328+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0
+[2024-06-02T12:41:47.557+0000] {docker.py:436} INFO - <!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="refresh" content="0;url='http://localhost/setup'" />
+
+        <title>Redirecting to http://localhost/setup</title>
+    </head>
+    <body>
+        Redirecting to <a href="http://localhost/setup">http://localhost/setup</a>.
+    </body>
+</html>
+[2024-06-02T12:41:47.558+0000] {docker.py:436} INFO - 100   334  100   334    0     0    132      0  0:00:02  0:00:02 --:--:--   132
+[2024-06-02T12:41:48.149+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-06-02T12:41:48.293+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=dag_with_docker_operator, task_id=execute_get_command_inside_docker, run_id=scheduled__2024-06-02T02:30:00+00:00, execution_date=20240602T023000, start_date=20240602T124142, end_date=20240602T124148
+[2024-06-02T12:41:48.386+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-06-02T12:41:48.506+0000] {taskinstance.py:3498} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-06-02T12:41:48.526+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

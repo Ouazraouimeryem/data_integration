@@ -1,0 +1,238 @@
+[2024-05-29T17:07:13.285+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-05-29T17:07:13.485+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: flask_monitoring.check_flask_health scheduled__2024-05-28T00:20:00+00:00 [queued]>
+[2024-05-29T17:07:13.584+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: flask_monitoring.check_flask_health scheduled__2024-05-28T00:20:00+00:00 [queued]>
+[2024-05-29T17:07:13.586+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2024-05-29T17:07:13.712+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): check_flask_health> on 2024-05-28 00:20:00+00:00
+[2024-05-29T17:07:13.719+0000] {standard_task_runner.py:63} INFO - Started process 1660 to run task
+[2024-05-29T17:07:13.721+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'flask_monitoring', 'check_flask_health', 'scheduled__2024-05-28T00:20:00+00:00', '--job-id', '101', '--raw', '--subdir', 'DAGS_FOLDER/flask_monitoring.py', '--cfg-path', '/tmp/tmpmdw0cxce']
+[2024-05-29T17:07:13.724+0000] {standard_task_runner.py:91} INFO - Job 101: Subtask check_flask_health
+[2024-05-29T17:07:13.864+0000] {task_command.py:426} INFO - Running <TaskInstance: flask_monitoring.check_flask_health scheduled__2024-05-28T00:20:00+00:00 [running]> on host f708138922bb
+[2024-05-29T17:07:14.049+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='flask_monitoring' AIRFLOW_CTX_TASK_ID='check_flask_health' AIRFLOW_CTX_EXECUTION_DATE='2024-05-28T00:20:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-05-28T00:20:00+00:00'
+[2024-05-29T17:07:14.050+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-05-29T17:07:14.069+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-05-29T17:07:14.070+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'curl -X GET http://flask:5000/check_send_status']
+[2024-05-29T17:07:14.081+0000] {subprocess.py:86} INFO - Output:
+[2024-05-29T17:07:14.092+0000] {subprocess.py:93} INFO -   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+[2024-05-29T17:07:14.093+0000] {subprocess.py:93} INFO -                                  Dload  Upload   Total   Spent    Left  Speed
+[2024-05-29T17:07:14.102+0000] {subprocess.py:93} INFO -   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0<!doctype html>
+[2024-05-29T17:07:14.105+0000] {subprocess.py:93} INFO - <html lang=en>
+[2024-05-29T17:07:14.107+0000] {subprocess.py:93} INFO -   <head>
+[2024-05-29T17:07:14.108+0000] {subprocess.py:93} INFO -     <title>NameError: name &#39;last_status&#39; is not defined
+[2024-05-29T17:07:14.119+0000] {subprocess.py:93} INFO -  // Werkzeug Debugger</title>
+[2024-05-29T17:07:14.120+0000] {subprocess.py:93} INFO -     <link rel="stylesheet" href="?__debugger__=yes&amp;cmd=resource&amp;f=style.css">
+[2024-05-29T17:07:14.122+0000] {subprocess.py:93} INFO -     <link rel="shortcut icon"
+[2024-05-29T17:07:14.123+0000] {subprocess.py:93} INFO -         href="?__debugger__=yes&amp;cmd=resource&amp;f=console.png">
+[2024-05-29T17:07:14.124+0000] {subprocess.py:93} INFO -     <script src="?__debugger__=yes&amp;cmd=resource&amp;f=debugger.js"></script>
+[2024-05-29T17:07:14.126+0000] {subprocess.py:93} INFO -     <script>
+[2024-05-29T17:07:14.127+0000] {subprocess.py:93} INFO -       var CONSOLE_MODE = false,
+[2024-05-29T17:07:14.128+0000] {subprocess.py:93} INFO -           EVALEX = false,
+[2024-05-29T17:07:14.133+0000] {subprocess.py:93} INFO -           EVALEX_TRUSTED = false,
+[2024-05-29T17:07:14.134+0000] {subprocess.py:93} INFO -           SECRET = "m0W2mug263yMqd81oBK2";
+[2024-05-29T17:07:14.135+0000] {subprocess.py:93} INFO -     </script>
+[2024-05-29T17:07:14.136+0000] {subprocess.py:93} INFO -   </head>
+[2024-05-29T17:07:14.136+0000] {subprocess.py:93} INFO -   <body style="background-color: #fff">
+[2024-05-29T17:07:14.137+0000] {subprocess.py:93} INFO -     <div class="debugger">
+[2024-05-29T17:07:14.138+0000] {subprocess.py:93} INFO - <h1>NameError</h1>
+[2024-05-29T17:07:14.138+0000] {subprocess.py:93} INFO - <div class="detail">
+[2024-05-29T17:07:14.139+0000] {subprocess.py:93} INFO -   <p class="errormsg">NameError: name &#39;last_status&#39; is not defined
+[2024-05-29T17:07:14.140+0000] {subprocess.py:93} INFO - </p>
+[2024-05-29T17:07:14.141+0000] {subprocess.py:93} INFO - </div>
+[2024-05-29T17:07:14.142+0000] {subprocess.py:93} INFO - <h2 class="traceback">Traceback <em>(most recent call last)</em></h2>
+[2024-05-29T17:07:14.142+0000] {subprocess.py:93} INFO - <div class="traceback">
+[2024-05-29T17:07:14.143+0000] {subprocess.py:93} INFO -   <h3></h3>
+[2024-05-29T17:07:14.144+0000] {subprocess.py:93} INFO -   <ul><li><div class="frame" id="frame-140474387808320">
+[2024-05-29T17:07:14.144+0000] {subprocess.py:93} INFO -   <h4>File <cite class="filename">"/usr/local/lib/python3.9/site-packages/flask/app.py"</cite>,
+[2024-05-29T17:07:14.145+0000] {subprocess.py:93} INFO -       line <em class="line">1498</em>,
+[2024-05-29T17:07:14.145+0000] {subprocess.py:93} INFO -       in <code class="function">__call__</code></h4>
+[2024-05-29T17:07:14.146+0000] {subprocess.py:93} INFO -   <div class="source library"><pre class="line before"><span class="ws">    </span>) -&gt; cabc.Iterable[bytes]:</pre>
+[2024-05-29T17:07:14.146+0000] {subprocess.py:93} INFO - <pre class="line before"><span class="ws">        </span>&#34;&#34;&#34;The WSGI server calls the Flask application object as the</pre>
+[2024-05-29T17:07:14.147+0000] {subprocess.py:93} INFO - <pre class="line before"><span class="ws">        </span>WSGI application. This calls :meth:`wsgi_app`, which can be</pre>
+[2024-05-29T17:07:14.147+0000] {subprocess.py:93} INFO - <pre class="line before"><span class="ws">        </span>wrapped to apply middleware.</pre>
+[2024-05-29T17:07:14.148+0000] {subprocess.py:93} INFO - <pre class="line before"><span class="ws">        </span>&#34;&#34;&#34;</pre>
+[2024-05-29T17:07:14.148+0000] {subprocess.py:93} INFO - <pre class="line current"><span class="ws">        </span>return self.wsgi_app(environ, start_response)</pre></div>
+[2024-05-29T17:07:14.148+0000] {subprocess.py:93} INFO - </div>
+[2024-05-29T17:07:14.149+0000] {subprocess.py:93} INFO - 
+[2024-05-29T17:07:14.149+0000] {subprocess.py:93} INFO - <li><div class="frame" id="frame-140474387808432">
+[2024-05-29T17:07:14.150+0000] {subprocess.py:93} INFO -   <h4>File <cite class="filename">"/usr/local/lib/python3.9/site-packages/flask/app.py"</cite>,
+[2024-05-29T17:07:14.150+0000] {subprocess.py:93} INFO -       line <em class="line">1476</em>,
+[2024-05-29T17:07:14.151+0000] {subprocess.py:93} INFO -       in <code class="function">wsgi_app</code></h4>
+[2024-05-29T17:07:14.152+0000] {subprocess.py:93} INFO -   <div class="source library"><pre class="line before"><span class="ws">            </span>try:</pre>
+[2024-05-29T17:07:14.152+0000] {subprocess.py:93} INFO - <pre class="line before"><span class="ws">                </span>ctx.push()</pre>
+[2024-05-29T17:07:14.153+0000] {subprocess.py:93} INFO - <pre class="line before"><span class="ws">                </span>response = self.full_dispatch_request()</pre>
+[2024-05-29T17:07:14.153+0000] {subprocess.py:93} INFO - <pre class="line before"><span class="ws">            </span>except Exception as e:</pre>
+[2024-05-29T17:07:14.154+0000] {subprocess.py:93} INFO - <pre class="line before"><span class="ws">                </span>error = e</pre>
+[2024-05-29T17:07:14.154+0000] {subprocess.py:93} INFO - <pre class="line current"><span class="ws">                </span>response = self.handle_exception(e)</pre>
+[2024-05-29T17:07:14.155+0000] {subprocess.py:93} INFO - <pre class="line after"><span class="ws">            </span>except:  # noqa: B001</pre>
+[2024-05-29T17:07:14.155+0000] {subprocess.py:93} INFO - <pre class="line after"><span class="ws">                </span>error = sys.exc_info()[1]</pre>
+[2024-05-29T17:07:14.156+0000] {subprocess.py:93} INFO - <pre class="line after"><span class="ws">                </span>raise</pre>
+[2024-05-29T17:07:14.157+0000] {subprocess.py:93} INFO - <pre class="line after"><span class="ws">            </span>return response(environ, start_response)</pre>
+[2024-05-29T17:07:14.157+0000] {subprocess.py:93} INFO - <pre class="line after"><span class="ws">        </span>finally:</pre></div>
+[2024-05-29T17:07:14.158+0000] {subprocess.py:93} INFO - </div>
+[2024-05-29T17:07:14.158+0000] {subprocess.py:93} INFO - 
+[2024-05-29T17:07:14.158+0000] {subprocess.py:93} INFO - <li><div class="frame" id="frame-140474387808544">
+[2024-05-29T17:07:14.159+0000] {subprocess.py:93} INFO -   <h4>File <cite class="filename">"/usr/local/lib/python3.9/site-packages/flask/app.py"</cite>,
+[2024-05-29T17:07:14.159+0000] {subprocess.py:93} INFO -       line <em class="line">1473</em>,
+[2024-05-29T17:07:14.159+0000] {subprocess.py:93} INFO -       in <code class="function">wsgi_app</code></h4>
+[2024-05-29T17:07:14.160+0000] {subprocess.py:93} INFO -   <div class="source library"><pre class="line before"><span class="ws">        </span>ctx = self.request_context(environ)</pre>
+[2024-05-29T17:07:14.160+0000] {subprocess.py:93} INFO - <pre class="line before"><span class="ws">        </span>error: BaseException | None = None</pre>
+[2024-05-29T17:07:14.161+0000] {subprocess.py:93} INFO - <pre class="line before"><span class="ws">        </span>try:</pre>
+[2024-05-29T17:07:14.161+0000] {subprocess.py:93} INFO - <pre class="line before"><span class="ws">            </span>try:</pre>
+[2024-05-29T17:07:14.161+0000] {subprocess.py:93} INFO - <pre class="line before"><span class="ws">                </span>ctx.push()</pre>
+[2024-05-29T17:07:14.162+0000] {subprocess.py:93} INFO - <pre class="line current"><span class="ws">                </span>response = self.full_dispatch_request()</pre>
+[2024-05-29T17:07:14.162+0000] {subprocess.py:93} INFO - <pre class="line after"><span class="ws">            </span>except Exception as e:</pre>
+[2024-05-29T17:07:14.163+0000] {subprocess.py:93} INFO - <pre class="line after"><span class="ws">                </span>error = e</pre>
+[2024-05-29T17:07:14.163+0000] {subprocess.py:93} INFO - <pre class="line after"><span class="ws">                </span>response = self.handle_exception(e)</pre>
+[2024-05-29T17:07:14.163+0000] {subprocess.py:93} INFO - <pre class="line after"><span class="ws">            </span>except:  # noqa: B001</pre>
+[2024-05-29T17:07:14.164+0000] {subprocess.py:93} INFO - <pre class="line after"><span class="ws">                </span>error = sys.exc_info()[1]</pre></div>
+[2024-05-29T17:07:14.164+0000] {subprocess.py:93} INFO - </div>
+[2024-05-29T17:07:14.165+0000] {subprocess.py:93} INFO - 
+[2024-05-29T17:07:14.165+0000] {subprocess.py:93} INFO - <li><div class="frame" id="frame-140474387808656">
+[2024-05-29T17:07:14.166+0000] {subprocess.py:93} INFO -   <h4>File <cite class="filename">"/usr/local/lib/python3.9/site-packages/flask/app.py"</cite>,
+[2024-05-29T17:07:14.166+0000] {subprocess.py:93} INFO -       line <em class="line">882</em>,
+[2024-05-29T17:07:14.166+0000] {subprocess.py:93} INFO -       in <code class="function">full_dispatch_request</code></h4>
+[2024-05-29T17:07:14.167+0000] {subprocess.py:93} INFO -   <div class="source library"><pre class="line before"><span class="ws">            </span>request_started.send(self, _async_wrapper=self.ensure_sync)</pre>
+[2024-05-29T17:07:14.167+0000] {subprocess.py:93} INFO - <pre class="line before"><span class="ws">            </span>rv = self.preprocess_request()</pre>
+[2024-05-29T17:07:14.168+0000] {subprocess.py:93} INFO - <pre class="line before"><span class="ws">            </span>if rv is None:</pre>
+[2024-05-29T17:07:14.168+0000] {subprocess.py:93} INFO - <pre class="line before"><span class="ws">                </span>rv = self.dispatch_request()</pre>
+[2024-05-29T17:07:14.168+0000] {subprocess.py:93} INFO - <pre class="line before"><span class="ws">        </span>except Exception as e:</pre>
+[2024-05-29T17:07:14.169+0000] {subprocess.py:93} INFO - <pre class="line current"><span class="ws">            </span>rv = self.handle_user_exception(e)</pre>
+[2024-05-29T17:07:14.169+0000] {subprocess.py:93} INFO - <pre class="line after"><span class="ws">        </span>return self.finalize_request(rv)</pre>
+[2024-05-29T17:07:14.170+0000] {subprocess.py:93} INFO - <pre class="line after"><span class="ws"></span> </pre>
+[2024-05-29T17:07:14.170+0000] {subprocess.py:93} INFO - <pre class="line after"><span class="ws">    </span>def finalize_request(</pre>
+[2024-05-29T17:07:14.171+0000] {subprocess.py:93} INFO - <pre class="line after"><span class="ws">        </span>self,</pre>
+[2024-05-29T17:07:14.171+0000] {subprocess.py:93} INFO - <pre class="line after"><span class="ws">        </span>rv: ft.ResponseReturnValue | HTTPException,</pre></div>
+[2024-05-29T17:07:14.171+0000] {subprocess.py:93} INFO - </div>
+[2024-05-29T17:07:14.172+0000] {subprocess.py:93} INFO - 
+[2024-05-29T17:07:14.173+0000] {subprocess.py:93} INFO - <li><div class="frame" id="frame-140474387808768">
+[2024-05-29T17:07:14.174+0000] {subprocess.py:93} INFO -   <h4>File <cite class="filename">"/usr/local/lib/python3.9/site-packages/flask/app.py"</cite>,
+[2024-05-29T17:07:14.175+0000] {subprocess.py:93} INFO -       line <em class="line">880</em>,
+[2024-05-29T17:07:14.176+0000] {subprocess.py:93} INFO -       in <code class="function">full_dispatch_request</code></h4>
+[2024-05-29T17:07:14.176+0000] {subprocess.py:93} INFO -   <div class="source library"><pre class="line before"><span class="ws"></span> </pre>
+[2024-05-29T17:07:14.177+0000] {subprocess.py:93} INFO - <pre class="line before"><span class="ws">        </span>try:</pre>
+[2024-05-29T17:07:14.177+0000] {subprocess.py:93} INFO - <pre class="line before"><span class="ws">            </span>request_started.send(self, _async_wrapper=self.ensure_sync)</pre>
+[2024-05-29T17:07:14.177+0000] {subprocess.py:93} INFO - <pre class="line before"><span class="ws">            </span>rv = self.preprocess_request()</pre>
+[2024-05-29T17:07:14.178+0000] {subprocess.py:93} INFO - <pre class="line before"><span class="ws">            </span>if rv is None:</pre>
+[2024-05-29T17:07:14.178+0000] {subprocess.py:93} INFO - <pre class="line current"><span class="ws">                </span>rv = self.dispatch_request()</pre>
+[2024-05-29T17:07:14.179+0000] {subprocess.py:93} INFO - <pre class="line after"><span class="ws">        </span>except Exception as e:</pre>
+[2024-05-29T17:07:14.179+0000] {subprocess.py:93} INFO - <pre class="line after"><span class="ws">            </span>rv = self.handle_user_exception(e)</pre>
+[2024-05-29T17:07:14.180+0000] {subprocess.py:93} INFO - <pre class="line after"><span class="ws">        </span>return self.finalize_request(rv)</pre>
+[2024-05-29T17:07:14.180+0000] {subprocess.py:93} INFO - <pre class="line after"><span class="ws"></span> </pre>
+[2024-05-29T17:07:14.180+0000] {subprocess.py:93} INFO - <pre class="line after"><span class="ws">    </span>def finalize_request(</pre></div>
+[2024-05-29T17:07:14.181+0000] {subprocess.py:93} INFO - </div>
+[2024-05-29T17:07:14.181+0000] {subprocess.py:93} INFO - 
+[2024-05-29T17:07:14.182+0000] {subprocess.py:93} INFO - <li><div class="frame" id="frame-140474387808880">
+[2024-05-29T17:07:14.182+0000] {subprocess.py:93} INFO -   <h4>File <cite class="filename">"/usr/local/lib/python3.9/site-packages/flask/app.py"</cite>,
+[2024-05-29T17:07:14.182+0000] {subprocess.py:93} INFO -       line <em class="line">865</em>,
+[2024-05-29T17:07:14.183+0000] {subprocess.py:93} INFO -       in <code class="function">dispatch_request</code></h4>
+[2024-05-29T17:07:14.183+0000] {subprocess.py:93} INFO -   <div class="source library"><pre class="line before"><span class="ws">            </span>and req.method == &#34;OPTIONS&#34;</pre>
+[2024-05-29T17:07:14.184+0000] {subprocess.py:93} INFO - <pre class="line before"><span class="ws">        </span>):</pre>
+[2024-05-29T17:07:14.184+0000] {subprocess.py:93} INFO - <pre class="line before"><span class="ws">            </span>return self.make_default_options_response()</pre>
+[2024-05-29T17:07:14.185+0000] {subprocess.py:93} INFO - <pre class="line before"><span class="ws">        </span># otherwise dispatch to the handler for that endpoint</pre>
+[2024-05-29T17:07:14.186+0000] {subprocess.py:93} INFO - <pre class="line before"><span class="ws">        </span>view_args: dict[str, t.Any] = req.view_args  # type: ignore[assignment]</pre>
+[2024-05-29T17:07:14.186+0000] {subprocess.py:93} INFO - <pre class="line current"><span class="ws">        </span>return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]</pre>
+[2024-05-29T17:07:14.187+0000] {subprocess.py:93} INFO - <pre class="line after"><span class="ws"></span> </pre>
+[2024-05-29T17:07:14.187+0000] {subprocess.py:93} INFO - <pre class="line after"><span class="ws">    </span>def full_dispatch_request(self) -&gt; Response:</pre>
+[2024-05-29T17:07:14.188+0000] {subprocess.py:93} INFO - <pre class="line after"><span class="ws">        </span>&#34;&#34;&#34;Dispatches the request and on top of that performs request</pre>
+[2024-05-29T17:07:14.188+0000] {subprocess.py:93} INFO - <pre class="line after"><span class="ws">        </span>pre and postprocessing as well as HTTP exception catching and</pre>
+[2024-05-29T17:07:14.189+0000] {subprocess.py:93} INFO - <pre class="line after"><span class="ws">        </span>error handling.</pre></div>
+[2024-05-29T17:07:14.190+0000] {subprocess.py:93} INFO - </div>
+[2024-05-29T17:07:14.191+0000] {subprocess.py:93} INFO - 
+[2024-05-29T17:07:14.191+0000] {subprocess.py:93} INFO - <li><div class="frame" id="frame-140474387808992">
+[2024-05-29T17:07:14.192+0000] {subprocess.py:93} INFO -   <h4>File <cite class="filename">"/app/appflask.py"</cite>,
+[2024-05-29T17:07:14.192+0000] {subprocess.py:93} INFO -       line <em class="line">206</em>,
+[2024-05-29T17:07:14.193+0000] {subprocess.py:93} INFO -       in <code class="function">check_send_status</code></h4>
+[2024-05-29T17:07:14.193+0000] {subprocess.py:93} INFO -   <div class="source "><pre class="line before"><span class="ws">        </span>return str(e)</pre>
+[2024-05-29T17:07:14.194+0000] {subprocess.py:93} INFO - <pre class="line before"><span class="ws"></span> </pre>
+[2024-05-29T17:07:14.195+0000] {subprocess.py:93} INFO - <pre class="line before"><span class="ws"></span>@app.route(&#39;/check_send_status&#39;, methods=[&#39;GET&#39;])</pre>
+[2024-05-29T17:07:14.195+0000] {subprocess.py:93} INFO - <pre class="line before"><span class="ws"></span>def check_send_status():</pre>
+[2024-05-29T17:07:14.196+0000] {subprocess.py:93} INFO - <pre class="line before"><span class="ws">    </span>global last_status</pre>
+[2024-05-29T17:07:14.196+0000] {subprocess.py:93} INFO - <pre class="line current"><span class="ws">    </span>return jsonify(last_status)</pre>
+[2024-05-29T17:07:14.197+0000] {subprocess.py:93} INFO - <pre class="line after"><span class="ws"></span> </pre>
+[2024-05-29T17:07:14.197+0000] {subprocess.py:93} INFO - <pre class="line after"><span class="ws"></span>if __name__ == &#39;__main__&#39;:</pre>
+[2024-05-29T17:07:14.198+0000] {subprocess.py:93} INFO - <pre class="line after"><span class="ws">    </span>app.run(host=&#39;0.0.0.0&#39;, port=5000, debug=True)</pre></div>
+[2024-05-29T17:07:14.198+0000] {subprocess.py:93} INFO - </div>
+[2024-05-29T17:07:14.199+0000] {subprocess.py:93} INFO - </ul>
+[2024-05-29T17:07:14.199+0000] {subprocess.py:93} INFO -   <blockquote>NameError: name &#39;last_status&#39; is not defined
+[2024-05-29T17:07:14.200+0000] {subprocess.py:93} INFO - </blockquote>
+[2024-05-29T17:07:14.200+0000] {subprocess.py:93} INFO - </div>
+[2024-05-29T17:07:14.201+0000] {subprocess.py:93} INFO - 
+[2024-05-29T17:07:14.201+0000] {subprocess.py:93} INFO - <div class="plain">
+[2024-05-29T17:07:14.202+0000] {subprocess.py:93} INFO -     <p>
+[2024-05-29T17:07:14.202+0000] {subprocess.py:93} INFO -       This is the Copy/Paste friendly version of the traceback.
+[2024-05-29T17:07:14.204+0000] {subprocess.py:93} INFO -     </p>
+[2024-05-29T17:07:14.205+0000] {subprocess.py:93} INFO -     <textarea cols="50" rows="10" name="code" readonly>Traceback (most recent call last):
+[2024-05-29T17:07:14.206+0000] {subprocess.py:93} INFO -   File &#34;/usr/local/lib/python3.9/site-packages/flask/app.py&#34;, line 1498, in __call__
+[2024-05-29T17:07:14.206+0000] {subprocess.py:93} INFO -     return self.wsgi_app(environ, start_response)
+[2024-05-29T17:07:14.207+0000] {subprocess.py:93} INFO -   File &#34;/usr/local/lib/python3.9/site-packages/flask/app.py&#34;, line 1476, in wsgi_app
+[2024-05-29T17:07:14.208+0000] {subprocess.py:93} INFO -     response = self.handle_exception(e)
+[2024-05-29T17:07:14.208+0000] {subprocess.py:93} INFO -   File &#34;/usr/local/lib/python3.9/site-packages/flask/app.py&#34;, line 1473, in wsgi_app
+[2024-05-29T17:07:14.209+0000] {subprocess.py:93} INFO -     response = self.full_dispatch_request()
+[2024-05-29T17:07:14.209+0000] {subprocess.py:93} INFO -   File &#34;/usr/local/lib/python3.9/site-packages/flask/app.py&#34;, line 882, in full_dispatch_request
+[2024-05-29T17:07:14.210+0000] {subprocess.py:93} INFO -     rv = self.handle_user_exception(e)
+[2024-05-29T17:07:14.210+0000] {subprocess.py:93} INFO -   File &#34;/usr/local/lib/python3.9/site-packages/flask/app.py&#34;, line 880, in full_dispatch_request
+[2024-05-29T17:07:14.211+0000] {subprocess.py:93} INFO -     rv = self.dispatch_request()
+[2024-05-29T17:07:14.211+0000] {subprocess.py:93} INFO -   File &#34;/usr/local/lib/python3.9/site-packages/flask/app.py&#34;, line 865, in dispatch_request
+[2024-05-29T17:07:14.212+0000] {subprocess.py:93} INFO -     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+[2024-05-29T17:07:14.212+0000] {subprocess.py:93} INFO -   File &#34;/app/appflask.py&#34;, line 206, in check_send_status
+[2024-05-29T17:07:14.213+0000] {subprocess.py:93} INFO -     return jsonify(last_status)
+[2024-05-29T17:07:14.214+0000] {subprocess.py:93} INFO - NameError: name &#39;last_status&#39; is not defined
+[2024-05-29T17:07:14.214+0000] {subprocess.py:93} INFO - </textarea>
+[2024-05-29T17:07:14.215+0000] {subprocess.py:93} INFO - </div>
+[2024-05-29T17:07:14.215+0000] {subprocess.py:93} INFO - <div class="explanation">
+[2024-05-29T17:07:14.216+0000] {subprocess.py:93} INFO -   The debugger caught an exception in your WSGI application.  You can now
+[2024-05-29T17:07:14.217+0000] {subprocess.py:93} INFO -   look at the traceback which led to the error.  <span class="nojavascript">
+[2024-05-29T17:07:14.217+0000] {subprocess.py:93} INFO -   If you enable JavaScript you can also use additional features such as code
+[2024-05-29T17:07:14.218+0000] {subprocess.py:93} INFO -   execution (if the evalex feature is enabled), automatic pasting of the
+[2024-05-29T17:07:14.218+0000] {subprocess.py:93} INFO -   exceptions and much more.</span>
+[2024-05-29T17:07:14.219+0000] {subprocess.py:93} INFO - </div>
+[2024-05-29T17:07:14.219+0000] {subprocess.py:93} INFO -       <div class="footer">
+[2024-05-29T17:07:14.220+0000] {subprocess.py:93} INFO -         Brought to you by <strong class="arthur">DON'T PANIC</strong>, your
+[2024-05-29T17:07:14.220+0000] {subprocess.py:93} INFO -         friendly Werkzeug powered traceback interpreter.
+[2024-05-29T17:07:14.222+0000] {subprocess.py:93} INFO -       </div>
+[2024-05-29T17:07:14.223+0000] {subprocess.py:93} INFO -     </div>
+[2024-05-29T17:07:14.224+0000] {subprocess.py:93} INFO - 
+[2024-05-29T17:07:14.224+0000] {subprocess.py:93} INFO -     <div class="pin-prompt">
+[2024-05-29T17:07:14.225+0000] {subprocess.py:93} INFO -       <div class="inner">
+[2024-05-29T17:07:14.226+0000] {subprocess.py:93} INFO -         <h3>Console Locked</h3>
+[2024-05-29T17:07:14.226+0000] {subprocess.py:93} INFO -         <p>
+[2024-05-29T17:07:14.227+0000] {subprocess.py:93} INFO -           The console is locked and needs to be unlocked by entering the PIN.
+[2024-05-29T17:07:14.227+0000] {subprocess.py:93} INFO -           You can find the PIN printed out on the standard output of your
+[2024-05-29T17:07:14.227+0000] {subprocess.py:93} INFO -           shell that runs the server.
+[2024-05-29T17:07:14.228+0000] {subprocess.py:93} INFO -         <form>
+[2024-05-29T17:07:14.228+0000] {subprocess.py:93} INFO -           <p>PIN:
+[2024-05-29T17:07:14.229+0000] {subprocess.py:93} INFO -             <input type=text name=pin size=14>
+[2024-05-29T17:07:14.229+0000] {subprocess.py:93} INFO -             <input type=submit name=btn value="Confirm Pin">
+[2024-05-29T17:07:14.230+0000] {subprocess.py:93} INFO -         </form>
+[2024-05-29T17:07:14.230+0000] {subprocess.py:93} INFO -       </div>
+[2024-05-29T17:07:14.230+0000] {subprocess.py:93} INFO -     </div>
+[2024-05-29T17:07:14.231+0000] {subprocess.py:93} INFO -   </body>
+[2024-05-29T17:07:14.231+0000] {subprocess.py:93} INFO - </html>
+[2024-05-29T17:07:14.232+0000] {subprocess.py:93} INFO - 
+[2024-05-29T17:07:14.232+0000] {subprocess.py:93} INFO - <!--
+[2024-05-29T17:07:14.233+0000] {subprocess.py:93} INFO - 
+[2024-05-29T17:07:14.233+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2024-05-29T17:07:14.234+0000] {subprocess.py:93} INFO -   File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1498, in __call__
+[2024-05-29T17:07:14.234+0000] {subprocess.py:93} INFO -     return self.wsgi_app(environ, start_response)
+[2024-05-29T17:07:14.235+0000] {subprocess.py:93} INFO -   File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1476, in wsgi_app
+[2024-05-29T17:07:14.235+0000] {subprocess.py:93} INFO -     response = self.handle_exception(e)
+[2024-05-29T17:07:14.236+0000] {subprocess.py:93} INFO -   File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+[2024-05-29T17:07:14.236+0000] {subprocess.py:93} INFO -     response = self.full_dispatch_request()
+[2024-05-29T17:07:14.237+0000] {subprocess.py:93} INFO -   File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_r100 12805  100 12805    0     0  1368k      0 --:--:-- --:--:-- --:--:-- 1389k
+[2024-05-29T17:07:14.237+0000] {subprocess.py:93} INFO - equest
+[2024-05-29T17:07:14.238+0000] {subprocess.py:93} INFO -     rv = self.handle_user_exception(e)
+[2024-05-29T17:07:14.238+0000] {subprocess.py:93} INFO -   File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+[2024-05-29T17:07:14.238+0000] {subprocess.py:93} INFO -     rv = self.dispatch_request()
+[2024-05-29T17:07:14.239+0000] {subprocess.py:93} INFO -   File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+[2024-05-29T17:07:14.239+0000] {subprocess.py:93} INFO -     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+[2024-05-29T17:07:14.240+0000] {subprocess.py:93} INFO -   File "/app/appflask.py", line 206, in check_send_status
+[2024-05-29T17:07:14.240+0000] {subprocess.py:93} INFO -     return jsonify(last_status)
+[2024-05-29T17:07:14.241+0000] {subprocess.py:93} INFO - NameError: name 'last_status' is not defined
+[2024-05-29T17:07:14.241+0000] {subprocess.py:93} INFO - 
+[2024-05-29T17:07:14.242+0000] {subprocess.py:93} INFO - 
+[2024-05-29T17:07:14.242+0000] {subprocess.py:93} INFO - -->
+[2024-05-29T17:07:14.242+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2024-05-29T17:07:14.244+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-05-29T17:07:14.309+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=flask_monitoring, task_id=check_flask_health, run_id=scheduled__2024-05-28T00:20:00+00:00, execution_date=20240528T002000, start_date=20240529T170713, end_date=20240529T170714
+[2024-05-29T17:07:14.384+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-05-29T17:07:14.438+0000] {taskinstance.py:3498} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-05-29T17:07:14.466+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

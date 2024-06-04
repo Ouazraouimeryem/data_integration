@@ -1,0 +1,213 @@
+[2024-06-01T16:05:51.674+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-06-01T16:05:51.726+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_with_docker_operator.execute_get_command_inside_docker manual__2024-06-01T16:05:38.656869+00:00 [queued]>
+[2024-06-01T16:05:51.745+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_with_docker_operator.execute_get_command_inside_docker manual__2024-06-01T16:05:38.656869+00:00 [queued]>
+[2024-06-01T16:05:51.746+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-06-01T16:05:51.805+0000] {taskinstance.py:2330} INFO - Executing <Task(DockerOperator): execute_get_command_inside_docker> on 2024-06-01 16:05:38.656869+00:00
+[2024-06-01T16:05:51.811+0000] {standard_task_runner.py:63} INFO - Started process 249 to run task
+[2024-06-01T16:05:51.815+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'dag_with_docker_operator', 'execute_get_command_inside_docker', 'manual__2024-06-01T16:05:38.656869+00:00', '--job-id', '748', '--raw', '--subdir', 'DAGS_FOLDER/dag_with_docker_operator.py', '--cfg-path', '/tmp/tmpdigkwdqn']
+[2024-06-01T16:05:51.818+0000] {standard_task_runner.py:91} INFO - Job 748: Subtask execute_get_command_inside_docker
+[2024-06-01T16:05:52.359+0000] {task_command.py:426} INFO - Running <TaskInstance: dag_with_docker_operator.execute_get_command_inside_docker manual__2024-06-01T16:05:38.656869+00:00 [running]> on host 9c47fcd741af
+[2024-06-01T16:05:52.809+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='dag_with_docker_operator' AIRFLOW_CTX_TASK_ID='execute_get_command_inside_docker' AIRFLOW_CTX_EXECUTION_DATE='2024-06-01T16:05:38.656869+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-06-01T16:05:38.656869+00:00'
+[2024-06-01T16:05:52.811+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-06-01T16:05:53.008+0000] {docker.py:366} INFO - Starting docker container from image composer-flask:latest
+[2024-06-01T16:05:53.060+0000] {docker.py:374} WARNING - Using remote engine or docker-in-docker and mounting temporary volume from host is not supported. Falling back to `mount_tmp_dir=False` mode. You can set `mount_tmp_dir` parameter to False to disable mounting and remove the warning
+[2024-06-01T16:05:54.480+0000] {docker.py:436} INFO - % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 -
+[2024-06-01T16:05:54.487+0000] {docker.py:436} INFO - -:--:-- --:--:-- --:--:--     0
+[2024-06-01T16:05:55.688+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:-
+[2024-06-01T16:05:55.701+0000] {docker.py:436} INFO - -
+[2024-06-01T16:05:55.702+0000] {docker.py:436} INFO - :--     0
+[2024-06-01T16:05:56.682+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0
+[2024-06-01T16:05:57.682+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:00:03 --:--:--     0
+[2024-06-01T16:05:58.687+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:00:04 --:--:--     0
+[2024-06-01T16:05:59.689+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:00:05 --:--:--     0
+[2024-06-01T16:06:00.687+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:00:06 --:--:--     0
+[2024-06-01T16:06:01.690+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:00:07 --:--:--     0
+[2024-06-01T16:06:02.691+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:00:08 --:--:--     0
+[2024-06-01T16:06:03.684+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:00:09 --:--:--
+[2024-06-01T16:06:03.686+0000] {docker.py:436} INFO - 0
+[2024-06-01T16:06:04.699+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:00:10 --:--:--     0
+[2024-06-01T16:06:05.691+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:00:11 --:--:--     0
+[2024-06-01T16:06:06.690+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:00:12 --:--:--     0
+[2024-06-01T16:06:07.689+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:00:13 --:--:--     0
+[2024-06-01T16:06:08.694+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:00:14 --:--:--     0
+[2024-06-01T16:06:09.691+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:00:15 --:--:--     0
+[2024-06-01T16:06:10.695+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:00:16 --:--:--     0
+[2024-06-01T16:06:11.695+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:00:17 --:--:--     0
+[2024-06-01T16:06:12.696+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:00:18 --:--:--     0
+[2024-06-01T16:06:13.698+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:00:19 --:--:--     0
+[2024-06-01T16:06:14.699+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:00:20 --:--:--     0
+[2024-06-01T16:06:15.714+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:00:21 --:--:--     0
+[2024-06-01T16:06:16.702+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:00:22 --:--:--     0
+[2024-06-01T16:06:17.702+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:00:23 --:--:--     0
+[2024-06-01T16:06:18.708+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:00:24 --:--:--     0
+[2024-06-01T16:06:19.705+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:00:25 --:--:--     0
+[2024-06-01T16:06:20.706+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:00:26 --:--:--     0
+[2024-06-01T16:06:21.713+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:00:27 --:--:--     0
+[2024-06-01T16:06:22.713+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:00:28 --:--:--     0
+[2024-06-01T16:06:23.712+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:00:29 --:--:--     0
+[2024-06-01T16:06:24.716+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:00:30 --:--:--     0
+[2024-06-01T16:06:25.715+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:00:31 --:--:--     0
+[2024-06-01T16:06:26.714+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:00:32 --:--:--     0
+[2024-06-01T16:06:27.724+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:00:33 --:--:--     0
+[2024-06-01T16:06:28.727+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:00:34 --:--:--     0
+[2024-06-01T16:06:29.946+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:00:35 --:--:--     0
+[2024-06-01T16:06:30.719+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:00:36 --:--:--     0
+[2024-06-01T16:06:31.722+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:00:37 --:--:--     0
+[2024-06-01T16:06:32.720+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:00:38 --:--:--     0
+[2024-06-01T16:06:33.726+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:00:39 --:--:--     0
+[2024-06-01T16:06:34.739+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:00:40 --:--:--     0
+[2024-06-01T16:06:35.724+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:00:41 --:--:--     0
+[2024-06-01T16:06:36.728+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:00:42 --:--:--     0
+[2024-06-01T16:06:37.752+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:00:43 --:--:--     0
+[2024-06-01T16:06:38.727+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:00:44 --:--:--     0
+[2024-06-01T16:06:39.774+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:00:45 --:--:--     0
+[2024-06-01T16:06:40.727+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:00:46 --:--:--     0
+[2024-06-01T16:06:41.743+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:00:47 --:--:--     0
+[2024-06-01T16:06:42.730+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:00:48 --:--:--     0
+[2024-06-01T16:06:43.732+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:00:49 --:--:--     0
+[2024-06-01T16:06:44.735+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:00:50 --:--:--     0
+[2024-06-01T16:06:45.763+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:00:51 --:--:--     0
+[2024-06-01T16:06:46.735+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:00:52 --:--:--     0
+[2024-06-01T16:06:47.747+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:00:53 --:--:--     0
+[2024-06-01T16:06:48.739+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:00:54 --:--:--     0
+[2024-06-01T16:06:49.742+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:00:55 --:--:--     0
+[2024-06-01T16:06:50.742+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:00:56 --:--:--     0
+[2024-06-01T16:06:51.743+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:00:57 --:--:--     0
+[2024-06-01T16:06:52.791+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:00:58 --:--:--     0
+[2024-06-01T16:06:53.743+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:00:59 --:--:--     0
+[2024-06-01T16:06:54.798+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:01:00 --:--:--     0
+[2024-06-01T16:06:55.792+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:01:01 --:--:--     0
+[2024-06-01T16:06:56.747+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:01:02 --:--:--     0
+[2024-06-01T16:06:57.750+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:01:03 --:--:--     0
+[2024-06-01T16:06:58.784+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:01:04 --:--:--     0
+[2024-06-01T16:06:59.790+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:01:05 --:--:--     0
+[2024-06-01T16:07:00.752+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:01:06 --:--:--     0
+[2024-06-01T16:07:01.753+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:01:07 --:--:--     0
+[2024-06-01T16:07:02.757+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:01:08 --:--:--     0
+[2024-06-01T16:07:03.751+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:01:09 --:--:--     0
+[2024-06-01T16:07:04.756+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:01:10 --:--:--     0
+[2024-06-01T16:07:05.897+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:01:11 --:--:--     0
+[2024-06-01T16:07:10.664+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:01:12 --:--:--     0
+[2024-06-01T16:07:11.055+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:01:13 --:--:--     0
+[2024-06-01T16:07:11.070+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:01:14 --:--:--     0
+[2024-06-01T16:07:11.087+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:01:15 --:--:--     0
+[2024-06-01T16:07:11.093+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:01:16 --:--:--     0
+[2024-06-01T16:07:11.857+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:01:17 --:--:--     0
+[2024-06-01T16:07:12.995+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:01:18 --:--:--     0
+[2024-06-01T16:07:13.764+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:01:19 --:--:--     0
+[2024-06-01T16:07:14.768+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:01:20 --:--:--     0
+[2024-06-01T16:07:15.769+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:01:21 --:--:--     0
+[2024-06-01T16:07:16.769+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:01:22 --:--:--     0
+[2024-06-01T16:07:17.770+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:01:23 --:--:--
+[2024-06-01T16:07:17.771+0000] {docker.py:436} INFO - 0
+[2024-06-01T16:07:18.850+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:01:24 --:--:--     0
+[2024-06-01T16:07:19.870+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:01:25 --:--:--     0
+[2024-06-01T16:07:20.773+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:01:26 --:--:--     0
+[2024-06-01T16:07:21.774+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:01:27 --:--:--     0
+[2024-06-01T16:07:22.791+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:01:28 --:--:--     0
+[2024-06-01T16:07:23.777+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:01:29 --:--:--     0
+[2024-06-01T16:07:24.779+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:01:30 --:--:--     0
+[2024-06-01T16:07:25.778+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:01:31 --:--:--     0
+[2024-06-01T16:07:26.781+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:01:32 --:--:--     0
+[2024-06-01T16:07:27.784+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:01:33 --:--:--     0
+[2024-06-01T16:07:29.063+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:01:34 --:--:--     0
+[2024-06-01T16:07:29.785+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:01:35 --:--:--     0
+[2024-06-01T16:07:30.819+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:01:36 --:--:--     0
+[2024-06-01T16:07:31.832+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:01:37 --:--:--     0
+[2024-06-01T16:07:32.788+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:01:38 --:--:--     0
+[2024-06-01T16:07:33.790+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:01:39 --:--:--     0
+[2024-06-01T16:07:34.819+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:01:40 --:--:--     0
+[2024-06-01T16:07:36.726+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:01:41 --:--:--     0
+[2024-06-01T16:07:36.850+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:01:42 --:--:--     0
+[2024-06-01T16:07:37.850+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:01:43 --:--:--     0
+[2024-06-01T16:07:38.791+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:01:44 --:--:--     0
+[2024-06-01T16:07:39.792+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:01:45 --:--:--     0
+[2024-06-01T16:07:40.812+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:01:46 --:--:--     0
+[2024-06-01T16:07:41.860+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:01:47 --:--:--     0
+[2024-06-01T16:07:42.850+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:01:48 --:--:--     0
+[2024-06-01T16:07:43.801+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:01:49 --:--:--     0
+[2024-06-01T16:07:44.808+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:01:50 --:--:--     0
+[2024-06-01T16:07:45.806+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:01:51 --:--:--     0
+[2024-06-01T16:07:46.864+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:01:52 --:--:--     0
+[2024-06-01T16:07:47.815+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:01:53 --:--:--     0
+[2024-06-01T16:07:48.805+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:01:54 --:--:--     0
+[2024-06-01T16:07:49.808+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:01:55 --:--:--     0
+[2024-06-01T16:07:50.886+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:01:56 --:--:--     0
+[2024-06-01T16:07:52.072+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:01:57 --:--:--     0
+[2024-06-01T16:07:52.821+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:01:58 --:--:--     0
+[2024-06-01T16:07:53.811+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:01:59 --:--:--     0
+[2024-06-01T16:07:54.891+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:02:00 --:--:--     0
+[2024-06-01T16:07:55.824+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:02:01 --:--:--     0
+[2024-06-01T16:07:56.822+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:02:02 --:--:--     0
+[2024-06-01T16:07:57.819+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:02:03 --:--:--     0
+[2024-06-01T16:07:58.823+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:02:04 --:--:--     0
+[2024-06-01T16:07:59.817+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:02:05 --:--:--     0
+[2024-06-01T16:08:00.818+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:02:06 --:--:--     0
+[2024-06-01T16:08:01.821+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:02:07 --:--:--     0
+[2024-06-01T16:08:02.822+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:02:08 --:--:--     0
+[2024-06-01T16:08:03.815+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:02:09 --:--:--     0
+[2024-06-01T16:08:04.815+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:02:10 --:--:--     0
+[2024-06-01T16:08:06.126+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:02:11 --:--:--     0
+[2024-06-01T16:08:08.666+0000] {docker.py:436} INFO - 0     0    0     0    0     0      0      0 --:--:--  0:02:13 --:--:--     0
+[2024-06-01T16:08:08.675+0000] {docker.py:436} INFO - curl: (28) Failed to connect to 172.18.0.6 port 5000 after 132079 ms: Couldn't connect to server
+[2024-06-01T16:08:09.470+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-06-01T16:08:09.621+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/docker/api/client.py", line 265, in _raise_for_status
+    response.raise_for_status()
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http+docker://localhost/v1.45/containers/create
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/docker/operators/docker.py", line 371, in _run_image
+    return self._run_image_with_mounts([*self.mounts, tmp_mount], add_tmp_variable=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/docker/operators/docker.py", line 398, in _run_image_with_mounts
+    self.container = self.cli.create_container(
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docker/api/container.py", line 439, in create_container
+    return self.create_container_from_config(config, name, platform)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docker/api/container.py", line 456, in create_container_from_config
+    return self._result(res, True)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docker/api/client.py", line 271, in _result
+    self._raise_for_status(response)
+  File "/home/airflow/.local/lib/python3.12/site-packages/docker/api/client.py", line 267, in _raise_for_status
+    raise create_api_error_from_http_exception(e) from e
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docker/errors.py", line 39, in create_api_error_from_http_exception
+    raise cls(e, response=response, explanation=explanation) from e
+docker.errors.APIError: 400 Client Error for http+docker://localhost/v1.45/containers/create: Bad Request ("invalid mount config for type "bind": bind source path does not exist: /tmp/airflowtmpifo58v41")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/docker/operators/docker.py", line 509, in execute
+    return self._run_image()
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/docker/operators/docker.py", line 380, in _run_image
+    return self._run_image_with_mounts(self.mounts, add_tmp_variable=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/docker/operators/docker.py", line 444, in _run_image_with_mounts
+    raise DockerContainerFailedException(f"Docker container failed: {result!r}", logs=log_lines)
+airflow.providers.docker.exceptions.DockerContainerFailedException: Docker container failed: {'StatusCode': 28}
+[2024-06-01T16:08:09.681+0000] {taskinstance.py:1206} INFO - Marking task as FAILED. dag_id=dag_with_docker_operator, task_id=execute_get_command_inside_docker, run_id=manual__2024-06-01T16:05:38.656869+00:00, execution_date=20240601T160538, start_date=20240601T160551, end_date=20240601T160809
+[2024-06-01T16:08:09.786+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 748 for task execute_get_command_inside_docker (Docker container failed: {'StatusCode': 28}; 249)
+[2024-06-01T16:08:10.035+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2024-06-01T16:08:10.184+0000] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-06-01T16:08:10.235+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

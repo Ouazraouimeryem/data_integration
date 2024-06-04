@@ -1,0 +1,80 @@
+[2024-05-29T10:48:02.937+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-05-29T10:48:02.988+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: check_send_status_dag.check_status scheduled__2023-01-01T00:10:00+00:00 [queued]>
+[2024-05-29T10:48:03.005+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: check_send_status_dag.check_status scheduled__2023-01-01T00:10:00+00:00 [queued]>
+[2024-05-29T10:48:03.006+0000] {taskinstance.py:2306} INFO - Starting attempt 2 of 2
+[2024-05-29T10:48:03.049+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): check_status> on 2023-01-01 00:10:00+00:00
+[2024-05-29T10:48:03.054+0000] {standard_task_runner.py:63} INFO - Started process 161 to run task
+[2024-05-29T10:48:03.058+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'check_send_status_dag', 'check_status', 'scheduled__2023-01-01T00:10:00+00:00', '--job-id', '24', '--raw', '--subdir', 'DAGS_FOLDER/check_send_status_dag.py', '--cfg-path', '/tmp/tmpn6n8g731']
+[2024-05-29T10:48:03.062+0000] {standard_task_runner.py:91} INFO - Job 24: Subtask check_status
+[2024-05-29T10:48:03.153+0000] {task_command.py:426} INFO - Running <TaskInstance: check_send_status_dag.check_status scheduled__2023-01-01T00:10:00+00:00 [running]> on host f708138922bb
+[2024-05-29T10:48:03.309+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='check_send_status_dag' AIRFLOW_CTX_TASK_ID='check_status' AIRFLOW_CTX_EXECUTION_DATE='2023-01-01T00:10:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-01-01T00:10:00+00:00'
+[2024-05-29T10:48:03.310+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-05-29T10:48:03.705+0000] {check_send_status_dag.py:15} ERROR - Error fetching status: 404 Client Error: Not Found for url: http://host.docker.internal/check_send_status
+[2024-05-29T10:48:03.706+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-05-29T10:48:03.707+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/check_send_status_dag.py", line 11, in check_send_status
+    response.raise_for_status()
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: http://host.docker.internal/check_send_status
+[2024-05-29T10:48:03.732+0000] {taskinstance.py:1206} INFO - Marking task as FAILED. dag_id=check_send_status_dag, task_id=check_status, run_id=scheduled__2023-01-01T00:10:00+00:00, execution_date=20230101T001000, start_date=20240529T104802, end_date=20240529T104803
+[2024-05-29T10:48:03.779+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 24 for task check_status (404 Client Error: Not Found for url: http://host.docker.internal/check_send_status; 161)
+[2024-05-29T10:48:03.798+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2024-05-29T10:48:03.828+0000] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-05-29T10:48:03.831+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2024-05-29T14:02:28.369+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-05-29T14:02:28.607+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: check_send_status_dag.check_status scheduled__2023-01-01T00:10:00+00:00 [queued]>
+[2024-05-29T14:02:28.652+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: check_send_status_dag.check_status scheduled__2023-01-01T00:10:00+00:00 [queued]>
+[2024-05-29T14:02:28.654+0000] {taskinstance.py:2306} INFO - Starting attempt 2 of 2
+[2024-05-29T14:02:28.798+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): check_status> on 2023-01-01 00:10:00+00:00
+[2024-05-29T14:02:28.813+0000] {standard_task_runner.py:63} INFO - Started process 1243 to run task
+[2024-05-29T14:02:28.818+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'check_send_status_dag', 'check_status', 'scheduled__2023-01-01T00:10:00+00:00', '--job-id', '24', '--raw', '--subdir', 'DAGS_FOLDER/check_send_status_dag.py', '--cfg-path', '/tmp/tmp45dvtmcf']
+[2024-05-29T14:02:28.831+0000] {standard_task_runner.py:91} INFO - Job 24: Subtask check_status
+[2024-05-29T14:02:29.180+0000] {task_command.py:426} INFO - Running <TaskInstance: check_send_status_dag.check_status scheduled__2023-01-01T00:10:00+00:00 [running]> on host f708138922bb
+[2024-05-29T14:02:29.554+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='check_send_status_dag' AIRFLOW_CTX_TASK_ID='check_status' AIRFLOW_CTX_EXECUTION_DATE='2023-01-01T00:10:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-01-01T00:10:00+00:00'
+[2024-05-29T14:02:29.556+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-05-29T14:02:29.625+0000] {check_send_status_dag.py:15} ERROR - Error fetching status: 500 Server Error: INTERNAL SERVER ERROR for url: http://flask:5000/check_send_status
+[2024-05-29T14:02:29.632+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-05-29T14:02:29.634+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/check_send_status_dag.py", line 11, in check_send_status
+    response.raise_for_status()
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: INTERNAL SERVER ERROR for url: http://flask:5000/check_send_status
+[2024-05-29T14:02:29.674+0000] {taskinstance.py:1206} INFO - Marking task as FAILED. dag_id=check_send_status_dag, task_id=check_status, run_id=scheduled__2023-01-01T00:10:00+00:00, execution_date=20230101T001000, start_date=20240529T140228, end_date=20240529T140229
+[2024-05-29T14:02:29.774+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 24 for task check_status (500 Server Error: INTERNAL SERVER ERROR for url: http://flask:5000/check_send_status; 1243)
+[2024-05-29T14:02:29.796+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2024-05-29T14:02:29.828+0000] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-05-29T14:02:29.831+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

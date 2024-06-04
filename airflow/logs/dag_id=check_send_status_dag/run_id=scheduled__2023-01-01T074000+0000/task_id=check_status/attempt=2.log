@@ -1,0 +1,144 @@
+[2024-05-29T13:06:27.174+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-05-29T13:06:27.252+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: check_send_status_dag.check_status scheduled__2023-01-01T07:40:00+00:00 [queued]>
+[2024-05-29T13:06:27.289+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: check_send_status_dag.check_status scheduled__2023-01-01T07:40:00+00:00 [queued]>
+[2024-05-29T13:06:27.323+0000] {taskinstance.py:2306} INFO - Starting attempt 2 of 2
+[2024-05-29T13:06:27.372+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): check_status> on 2023-01-01 07:40:00+00:00
+[2024-05-29T13:06:27.378+0000] {standard_task_runner.py:63} INFO - Started process 591 to run task
+[2024-05-29T13:06:27.381+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'check_send_status_dag', 'check_status', 'scheduled__2023-01-01T07:40:00+00:00', '--job-id', '105', '--raw', '--subdir', 'DAGS_FOLDER/check_send_status_dag.py', '--cfg-path', '/tmp/tmp_77eqsfr']
+[2024-05-29T13:06:27.384+0000] {standard_task_runner.py:91} INFO - Job 105: Subtask check_status
+[2024-05-29T13:06:27.598+0000] {task_command.py:426} INFO - Running <TaskInstance: check_send_status_dag.check_status scheduled__2023-01-01T07:40:00+00:00 [running]> on host f708138922bb
+[2024-05-29T13:06:27.774+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='check_send_status_dag' AIRFLOW_CTX_TASK_ID='check_status' AIRFLOW_CTX_EXECUTION_DATE='2023-01-01T07:40:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-01-01T07:40:00+00:00'
+[2024-05-29T13:06:27.775+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-05-29T13:06:28.180+0000] {check_send_status_dag.py:15} ERROR - Error fetching status: 404 Client Error: Not Found for url: http://host.docker.internal/check_send_status
+[2024-05-29T13:06:28.184+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-05-29T13:06:28.185+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/check_send_status_dag.py", line 11, in check_send_status
+    response.raise_for_status()
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: http://host.docker.internal/check_send_status
+[2024-05-29T13:06:28.211+0000] {taskinstance.py:1206} INFO - Marking task as FAILED. dag_id=check_send_status_dag, task_id=check_status, run_id=scheduled__2023-01-01T07:40:00+00:00, execution_date=20230101T074000, start_date=20240529T130627, end_date=20240529T130628
+[2024-05-29T13:06:28.312+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 105 for task check_status (404 Client Error: Not Found for url: http://host.docker.internal/check_send_status; 591)
+[2024-05-29T13:06:28.358+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2024-05-29T13:06:28.399+0000] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-05-29T13:06:28.405+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2024-05-29T15:10:58.454+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-05-29T15:10:58.541+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: check_send_status_dag.check_status scheduled__2023-01-01T07:40:00+00:00 [queued]>
+[2024-05-29T15:10:58.573+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: check_send_status_dag.check_status scheduled__2023-01-01T07:40:00+00:00 [queued]>
+[2024-05-29T15:10:58.574+0000] {taskinstance.py:2306} INFO - Starting attempt 2 of 2
+[2024-05-29T15:10:58.633+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): check_status> on 2023-01-01 07:40:00+00:00
+[2024-05-29T15:10:58.638+0000] {standard_task_runner.py:63} INFO - Started process 54 to run task
+[2024-05-29T15:10:58.644+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'check_send_status_dag', 'check_status', 'scheduled__2023-01-01T07:40:00+00:00', '--job-id', '93', '--raw', '--subdir', 'DAGS_FOLDER/check_send_status_dag.py', '--cfg-path', '/tmp/tmplhac2n63']
+[2024-05-29T15:10:58.647+0000] {standard_task_runner.py:91} INFO - Job 93: Subtask check_status
+[2024-05-29T15:10:58.780+0000] {task_command.py:426} INFO - Running <TaskInstance: check_send_status_dag.check_status scheduled__2023-01-01T07:40:00+00:00 [running]> on host f708138922bb
+[2024-05-29T15:10:59.047+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='check_send_status_dag' AIRFLOW_CTX_TASK_ID='check_status' AIRFLOW_CTX_EXECUTION_DATE='2023-01-01T07:40:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-01-01T07:40:00+00:00'
+[2024-05-29T15:10:59.048+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-05-29T15:11:02.453+0000] {check_send_status_dag.py:15} ERROR - Error fetching status: HTTPConnectionPool(host='flask', port=5000): Max retries exceeded with url: /check_send_status (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f7717333110>: Failed to resolve 'flask' ([Errno -2] Name or service not known)"))
+[2024-05-29T15:11:02.513+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-05-29T15:11:02.515+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/util/connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/socket.py", line 963, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno -2] Name or service not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 793, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 496, in _make_request
+    conn.request(
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connection.py", line 400, in request
+    self.endheaders()
+  File "/usr/local/lib/python3.12/http/client.py", line 1331, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.12/http/client.py", line 1091, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.12/http/client.py", line 1035, in send
+    self.connect()
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connection.py", line 238, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connection.py", line 205, in _new_conn
+    raise NameResolutionError(self.host, self, e) from e
+urllib3.exceptions.NameResolutionError: <urllib3.connection.HTTPConnection object at 0x7f7717333110>: Failed to resolve 'flask' ([Errno -2] Name or service not known)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 847, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/util/retry.py", line 515, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='flask', port=5000): Max retries exceeded with url: /check_send_status (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f7717333110>: Failed to resolve 'flask' ([Errno -2] Name or service not known)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/check_send_status_dag.py", line 10, in check_send_status
+    response = requests.get("http://flask:5000/check_send_status")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='flask', port=5000): Max retries exceeded with url: /check_send_status (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f7717333110>: Failed to resolve 'flask' ([Errno -2] Name or service not known)"))
+[2024-05-29T15:11:02.562+0000] {taskinstance.py:1206} INFO - Marking task as FAILED. dag_id=check_send_status_dag, task_id=check_status, run_id=scheduled__2023-01-01T07:40:00+00:00, execution_date=20230101T074000, start_date=20240529T151058, end_date=20240529T151102
+[2024-05-29T15:11:02.891+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 93 for task check_status (HTTPConnectionPool(host='flask', port=5000): Max retries exceeded with url: /check_send_status (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f7717333110>: Failed to resolve 'flask' ([Errno -2] Name or service not known)")); 54)
+[2024-05-29T15:11:02.921+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2024-05-29T15:11:03.328+0000] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-05-29T15:11:03.363+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

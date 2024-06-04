@@ -1,0 +1,71 @@
+[2024-06-02T10:39:36.636+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-06-02T10:39:36.689+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_with_docker_operator.check_status scheduled__2024-06-01T22:30:00+00:00 [queued]>
+[2024-06-02T10:39:36.711+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_with_docker_operator.check_status scheduled__2024-06-01T22:30:00+00:00 [queued]>
+[2024-06-02T10:39:36.712+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2024-06-02T10:39:36.875+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): check_status> on 2024-06-01 22:30:00+00:00
+[2024-06-02T10:39:36.883+0000] {standard_task_runner.py:63} INFO - Started process 997 to run task
+[2024-06-02T10:39:36.887+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'dag_with_docker_operator', 'check_status', 'scheduled__2024-06-01T22:30:00+00:00', '--job-id', '849', '--raw', '--subdir', 'DAGS_FOLDER/dag_with_docker_operator.py', '--cfg-path', '/tmp/tmpugkmtxv8']
+[2024-06-02T10:39:36.889+0000] {standard_task_runner.py:91} INFO - Job 849: Subtask check_status
+[2024-06-02T10:39:37.005+0000] {task_command.py:426} INFO - Running <TaskInstance: dag_with_docker_operator.check_status scheduled__2024-06-01T22:30:00+00:00 [running]> on host 9c47fcd741af
+[2024-06-02T10:39:37.223+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='dag_with_docker_operator' AIRFLOW_CTX_TASK_ID='check_status' AIRFLOW_CTX_EXECUTION_DATE='2024-06-01T22:30:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-06-01T22:30:00+00:00'
+[2024-06-02T10:39:37.225+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-06-02T10:39:37.258+0000] {python.py:237} INFO - Done. Returned value was: {'status': 'success'}
+[2024-06-02T10:39:37.259+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-06-02T10:39:37.328+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=dag_with_docker_operator, task_id=check_status, run_id=scheduled__2024-06-01T22:30:00+00:00, execution_date=20240601T223000, start_date=20240602T103936, end_date=20240602T103937
+[2024-06-02T10:39:37.426+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-06-02T10:39:37.456+0000] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-06-02T10:39:37.461+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2024-06-02T11:39:36.988+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-06-02T11:39:37.027+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_with_docker_operator.check_status scheduled__2024-06-01T22:30:00+00:00 [queued]>
+[2024-06-02T11:39:37.047+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_with_docker_operator.check_status scheduled__2024-06-01T22:30:00+00:00 [queued]>
+[2024-06-02T11:39:37.047+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2024-06-02T11:39:37.190+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): check_status> on 2024-06-01 22:30:00+00:00
+[2024-06-02T11:39:37.196+0000] {standard_task_runner.py:63} INFO - Started process 1922 to run task
+[2024-06-02T11:39:37.200+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'dag_with_docker_operator', 'check_status', 'scheduled__2024-06-01T22:30:00+00:00', '--job-id', '849', '--raw', '--subdir', 'DAGS_FOLDER/dag_with_docker_operator.py', '--cfg-path', '/tmp/tmpdhb4yi94']
+[2024-06-02T11:39:37.202+0000] {standard_task_runner.py:91} INFO - Job 849: Subtask check_status
+[2024-06-02T11:39:37.319+0000] {task_command.py:426} INFO - Running <TaskInstance: dag_with_docker_operator.check_status scheduled__2024-06-01T22:30:00+00:00 [running]> on host 9c47fcd741af
+[2024-06-02T11:39:37.540+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='dag_with_docker_operator' AIRFLOW_CTX_TASK_ID='check_status' AIRFLOW_CTX_EXECUTION_DATE='2024-06-01T22:30:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-06-01T22:30:00+00:00'
+[2024-06-02T11:39:37.541+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-06-02T11:39:37.575+0000] {python.py:237} INFO - Done. Returned value was: {'status': 'failed'}
+[2024-06-02T11:39:37.578+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-06-02T11:39:37.632+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=dag_with_docker_operator, task_id=check_status, run_id=scheduled__2024-06-01T22:30:00+00:00, execution_date=20240601T223000, start_date=20240602T113937, end_date=20240602T113937
+[2024-06-02T11:39:37.695+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-06-02T11:39:37.716+0000] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-06-02T11:39:37.718+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2024-06-02T12:38:03.041+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-06-02T12:38:03.092+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_with_docker_operator.check_status scheduled__2024-06-01T22:30:00+00:00 [queued]>
+[2024-06-02T12:38:03.110+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_with_docker_operator.check_status scheduled__2024-06-01T22:30:00+00:00 [queued]>
+[2024-06-02T12:38:03.110+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2024-06-02T12:38:03.176+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): check_status> on 2024-06-01 22:30:00+00:00
+[2024-06-02T12:38:03.188+0000] {standard_task_runner.py:63} INFO - Started process 3472 to run task
+[2024-06-02T12:38:03.192+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'dag_with_docker_operator', 'check_status', 'scheduled__2024-06-01T22:30:00+00:00', '--job-id', '894', '--raw', '--subdir', 'DAGS_FOLDER/dag_with_docker_operator.py', '--cfg-path', '/tmp/tmp6e_3eohe']
+[2024-06-02T12:38:03.195+0000] {standard_task_runner.py:91} INFO - Job 894: Subtask check_status
+[2024-06-02T12:38:03.569+0000] {task_command.py:426} INFO - Running <TaskInstance: dag_with_docker_operator.check_status scheduled__2024-06-01T22:30:00+00:00 [running]> on host 9c47fcd741af
+[2024-06-02T12:38:03.765+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='dag_with_docker_operator' AIRFLOW_CTX_TASK_ID='check_status' AIRFLOW_CTX_EXECUTION_DATE='2024-06-01T22:30:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-06-01T22:30:00+00:00'
+[2024-06-02T12:38:03.766+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-06-02T12:38:03.883+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-06-02T12:38:03.884+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/dag_with_docker_operator.py", line 24, in check_send_status
+    raise ValueError(f"Request returned non-success status: {response_json.get('status')}")
+ValueError: Request returned non-success status: failed
+[2024-06-02T12:38:03.927+0000] {taskinstance.py:1206} INFO - Marking task as UP_FOR_RETRY. dag_id=dag_with_docker_operator, task_id=check_status, run_id=scheduled__2024-06-01T22:30:00+00:00, execution_date=20240601T223000, start_date=20240602T123803, end_date=20240602T123803
+[2024-06-02T12:38:03.992+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 894 for task check_status (Request returned non-success status: failed; 3472)
+[2024-06-02T12:38:04.049+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2024-06-02T12:38:04.249+0000] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-06-02T12:38:04.251+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
